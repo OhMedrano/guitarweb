@@ -2,17 +2,17 @@
 
 /**
  * @ngdoc directive
- * @name guitarwebApp.directive:fretMove
+ * @name guitarwebApp.directive:myDirective
  * @description
- * # fretMove
+ * # myDirective
  */
 angular.module('guitarwebApp')
-  .directive('fretMove', function () {
+  .directive('myDirective', function () {
     return {
       template: '<div></div>',
-      restrict: 'EA',
+      restrict: 'E',
       link: function postLink(scope, element, attrs) {
-        element.css('background-color','green','border','1px solid black');
+        element.text('this is the myDirective directive');
       }
     };
   });

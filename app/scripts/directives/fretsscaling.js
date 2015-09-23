@@ -2,17 +2,18 @@
 
 /**
  * @ngdoc directive
- * @name guitarwebApp.directive:fretMove
+ * @name guitarwebApp.directive:fretsScaling
  * @description
- * # fretMove
+ * # fretsScaling
  */
 angular.module('guitarwebApp')
-  .directive('fretMove', function () {
+  .directive('fretsScaling', function () {
     return {
-      template: '<div></div>',
+      template: '<div>Whats up</div>',
       restrict: 'EA',
       link: function postLink(scope, element, attrs) {
         element.css('background-color','green','border','1px solid black');
       }
-    };
+  		}
+     
   });

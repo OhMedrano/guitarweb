@@ -1,30 +1,36 @@
 <div id='guitarImage' style='
 	border:1px solid black;
-	height:1000px;
+	height:340px;
 	background-image:url(images/GretchSilver.jpg);
 	background-size:contain;
 	background-repeat:no-repeat;
-	width:100%;
+	width:105%;
 	
 '>
 	<div id='fretRange' style='
 		border:2px solid green;
 		position:relative;
-		top:130px;
+		top:136px;
 		height:25px;
-		margin-right:116px;
+		margin-right:122px;
 		margin-left:163px;
 	'>
 		<!-- The length of this div is 420... heh. -->
 
-		<div id='fretHarm' style='
+		 <div id='fretHarm' style='
 			border:1px solid white;
 			height:100%;
-			width:418px;
+			width:445px;
 			color:black;
 
-		' fretMove>
-		
+		'>
+			<div id='fretHarmm' style='
+				border:1px solid red;
+				padding:10px;
+				width:54%;
+			'>
+
+			</div>
 
 
 		</div>
@@ -33,7 +39,12 @@
 
 	</div>
 
-	{{fretVar[0].values[1]}}
+	{{(fretVar[0].values[1]*100)}}
 
 
-</div>
+
+
+</div>  
+
+		<frets-Scaling></frets-Scaling>
+		<my-Directive>Tag</my-Directive>
