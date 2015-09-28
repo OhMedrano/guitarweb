@@ -9,10 +9,17 @@
 angular.module('guitarwebApp')
   .directive('fretMove', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'templates/fretMove.html',
       restrict: 'EA',
       link: function postLink(scope, element, attrs) {
-        element.css('background-color','green','border','1px solid black');
+        var image = $('#guitarImage');
+        $(image).css('border-color','red');
+        var fretStart = $('#fretNum').scope(i);
+        console.log(fretStart);
+        $('#fretSelector ul li').click(function(){
+        	$('#fretHarmm').css('background-color','green');
+
+        });
       }
     };
   });

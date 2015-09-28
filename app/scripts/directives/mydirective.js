@@ -7,12 +7,19 @@
  * # myDirective
  */
 angular.module('guitarwebApp')
-  .directive('myDirective', function () {
+  .directive('myDirective', function ($interpolate) {
     return {
       template: '<div></div>',
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
-        element.text('this is the myDirective directive');
+        var exp = $interpolate(element.html());
+        var watchFunc = function(){
+        	return exp(scope);
+
+        };
+        scope.$watch(watchFunc, function(html){
+        	element.html(html);
+        });
       }
     };
   });
