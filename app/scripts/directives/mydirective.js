@@ -7,19 +7,26 @@
  * # myDirective
  */
 angular.module('guitarwebApp')
-  .directive('myDirective', function ($interpolate) {
+  .directive('myDirective', function () {
     return {
-      template: '<div></div>',
-      restrict: 'E',
+      
+      restrict: 'EA',
       link: function postLink(scope, element, attrs) {
-        var exp = $interpolate(element.html());
-        var watchFunc = function(){
-        	return exp(scope);
+        scope.selectIndex = 0; 
 
-        };
-        scope.$watch(watchFunc, function(html){
-        	element.html(html);
-        });
+       scope.fretPercent = function($index){
+       	console.log($index);
+       	scope.selectIndex = $index;
+       	console.log(scope.selectIndex);
+       	
+
+       	element.css('width',$index+'%');
+       	
+       	return $index;
+
+       	
+       };
+
       }
     };
   });

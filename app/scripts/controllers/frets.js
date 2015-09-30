@@ -17,12 +17,7 @@ angular.module('guitarwebApp')
     	$scope.fretVar = data;
     	
     	});
-    $scope.selectIndex = 0;
-    $scope.fretPercent = function($index){
-    	console.log($index);
-    	$scope.selectIndex = $index;
-    	return $scope.selectIndex;
-    };
+   
 
  });
   
