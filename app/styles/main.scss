@@ -89,6 +89,58 @@ body {
     border-bottom: 0;
   }
 }
+#guitarImage {
+
+        border:0px solid black;
+        height:340px;
+        background-image:url(/images/GretchSilver.jpg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        width:104.5%;
+
+        #fretRange {
+
+          border:2px solid green;
+          position:relative;
+          top:136px;
+          height:25px;
+          margin-right:122px;
+          margin-left:166px;
+
+          #fretHarm {
+            border:1px solid white;
+            height:100%;
+            width:445px;
+            color:black;
+
+            #fretHarmm {
+              width:100%;
+              height:20px;
+              padding:1px;
+              border-right:3px solid red;
+
+              #fretHarmzHalf {
+                border:0px solid blue;
+                background-color:blue;
+                padding:1px; width:0px;
+                position:relative;
+                left:50%;
+                height:100%;
+
+              }
+              #fretHarmzQuarter {
+                border:0px solid yellow;
+                background-color:yellow;
+                padding:1px;width:0px;
+                display:block;
+              }
+
+            }
+          }
+        }
+
+}
+
 
 
 #fretNumList {
@@ -99,12 +151,13 @@ body {
 
     #fretNum {
       border:1px solid black;
-      width:12%;
+      width:12.5%;
       padding:3px;
       text-align:center;
       float:left;
       margin:2px;
       border-radius:5px;
+      display:inline-block;
 
     }
     #fretNum:hover {
@@ -115,4 +168,32 @@ body {
 
 
 
+}
+
+.halfRatio {
+
+  #fretHarmm{
+    #fretHarmzHalf {
+     display:block;           
+      
+    }
+    #fretHarmzQuarter {
+      display:none;
+    }
+
+  }
+
+}
+
+.quartRatio {
+
+  #fretHarmm {
+    #fretHarmzHalf {
+      display:none;
+
+    }
+    #fretHarmzQuarter {
+      display:block;
+    }
+  }
 }

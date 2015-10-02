@@ -1,29 +1,16 @@
 <div class='container'>
 
 			<div id='guitarImage' style='
-				border:1px solid black;
-				height:340px;
-				background-image:url(images/GretchSilver.jpg);
-				background-size:contain;
-				background-repeat:no-repeat;
-				width:105%;
+				
 				
 			'>
 				<div id='fretRange' style='
-					border:2px solid green;
-					position:relative;
-					top:136px;
-					height:25px;
-					margin-right:122px;
-					margin-left:166px;
+					
 				'>
 					<!-- The length of this div is 420... heh. -->
 
 					 <div id='fretHarm' style='
-						border:1px solid white;
-						height:100%;
-						width:445px;
-						color:black;
+						
 
 					'>
 					    <guitar-Neck></guitar-Neck>
@@ -36,68 +23,31 @@
 
 				</div>
 
-				{{20.7-(fretVar[0].values[1]*20.7)}}
+
 
 
 
 
 			</div>  
-			<div id='fretSelector' class='col-md-12' style='
-				height:70%;width:100%;
-			'>
-					Select your starting fret. 
-					<ul id='fretNumList' ng-model='guitarCss' style=''>
-					<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)'>
-						<div id='fretNum' style=''>{{$index}}</div>
-						</li>
+			
+			<div id='fretSelection' class='container' style=''>
 
-					
-					</ul>
-					<p>{{guitarCss}}</p>
-			<!-- 
-					<ul id='fretNumList' ng-model='guitarCss'>
-						<li ng-repeat='i in fretPercent'>
-						{{$index}}
-						</li>
-					</ul>
-
-			 -->
+				<div id='fretSelector' class='col-md-12' style='
+					height:70%;width:30%;
+					float:left;
+				'>
 				
+						Select your starting fret. 
+						<ul id='fretNumList' ng-model='guitarCss' class='col-md-4' style='width:30%;'>
+						<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)' class=''>
+							<div id='fretNum' style=''>{{$index}}</div>
+							</li>		
+						</ul>
+				</div>
+
+				<div id='fretRatioes' class='col-md-6' style=''>
+					String Division:<br>
+					
+				</div>
 			</div>
-
-			<p><input type='number' ng-model='a'></p>
-			{{((20.7-(a*20.7))*100)/20.7}}
-			{{fretVar[0].widthPercent[2]}}
-			<br><br>
-			<my-Directive style='border:1px solid black;padding:10px;'></my-Directive>
-			<!-- 
-				fret 1 89.1
-					 2 84.10
-					 3 79.37
-					 4 74.91
-					 5 70.71
-					 6 66.74
-					 7 63
-					 8 59.45
-					 9 56.12
-					 10 52.97
-					 11
-					 12
-					 13
-					 14
-					 15
-					 16
-					 17
-					 18
-					 19
-					 20
-					 21
-					 22
-					 23
-					 24
-
-
-
-
-			 -->
-</div>
+			

@@ -1,16 +1,21 @@
-<div id='fretHarmm' ng-model='fretScale' style='
-		 width:100%;		
-		 height:20px;
-		 border:1px solid white;
-		 padding:1px;
+<div id='fretHarmm' ng-class='{halfRatio: fretRatio, quartRatio: fretRatios}' style='
+		 
 						'>
 	<div id='fretHarmzHalf' style='
-			border:1px solid blue;
-			background-color:blue;
-			padding:1px;width:1px;
-			position:relative;
-			left:50%;
-			height:100%;
+			
 						'>
-		</div>
+			
+	</div>
+	<div id='fretHarmzQuarter' style='
+			position:relative;
+			left:75%;
+			bottom:100%;
+			height:100%; '>
+	</div>
+	<div id='fretHarmzQuarter' style='
+			position:relative;
+			left:25%;
+			bottom:200%;
+			height:100%; '>
+	</div>
 </div>

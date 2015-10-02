@@ -8,7 +8,8 @@
  * Controller of the guitarwebApp
  */
 angular.module('guitarwebApp')
-  .controller('FretsCtrl', function ($scope, $routeParams, $http, frettin) {
+  .controller('FretsCtrl', function ($scope, $routeParams, $http, frettin,
+  									$parse, $interpolate) {
     
 
   	$scope.fretVar = [];
@@ -17,6 +18,7 @@ angular.module('guitarwebApp')
     	$scope.fretVar = data;
     	
     	});
+   
    
 
  });
