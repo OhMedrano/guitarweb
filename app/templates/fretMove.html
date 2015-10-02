@@ -26,25 +26,8 @@
 						color:black;
 
 					'>
-
-						<my-Directive id='fretHarmm' style='
-							
-							width:100%;
-							
-							height:40px;
-							border:1px solid white;
-							padding:1px;
-						' >
-						<div id='fretHarmzHalf' style='
-							border:1px solid blue;
-							background-color:blue;
-							padding:1px;width:1px;
-							position:relative;
-							left:50%;
-							height:100%;
-						'>
-						</div>
-						</div>
+					    <guitar-Neck></guitar-Neck>
+						
 
 
 					</div>
@@ -64,7 +47,7 @@
 			'>
 					Select your starting fret. 
 					<ul id='fretNumList' ng-model='guitarCss' style=''>
-					<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-click='fretPercent(i)'>
+					<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)'>
 						<div id='fretNum' style=''>{{$index}}</div>
 						</li>
 

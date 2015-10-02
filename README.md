@@ -1,13 +1,8 @@
-# guitarweb
+10/2 - 
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+		Guitar harmonic visualizer. 
 
-## Build & development
+			This web app is built for guitarist trying to learn the placements of nodes
+			for the pinch harmonic technique. 
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
-# guitarweb
+			The basic logic is already built, just gotta style it. 
