@@ -48,6 +48,9 @@
 
 				<div id='fretRatioSelect' style=''>
 					<ul>
+						<input type='button' ng-click='fretReset()'>
+							Show All 
+							</input>
 						<li ng-repeat='ratios in fretRatios'>
 							<label>
 								<input type='button'ng-click='fretDiv(ratios.type)'>

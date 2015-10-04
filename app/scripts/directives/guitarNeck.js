@@ -39,11 +39,11 @@ angular.module('guitarwebApp')
        		console.log($index);
        		console.log(scope.selectDiv);
        		
-       		
-
-       		
        };
+       scope.fretReset = function(){
 
+       	element.removeClass();
+       };
       }
     };
   });
