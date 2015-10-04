@@ -15,8 +15,8 @@ angular.module('guitarwebApp')
       templateUrl:'templates/guitarNeck.html',  
       restrict: 'EA',
       link: function postLink(scope, element, attrs, interpolate) {
-
-        scope.selectIndex = 0; 
+ 
+       scope.selectIndex = 0; 
 
        scope.fretPercent = function($index){
        		scope.selectIndex = $index + '%';
@@ -24,15 +24,25 @@ angular.module('guitarwebApp')
        		
        		console.log($index);
        		console.log(scope.selectIndex);
-       	
-       	
-       	
-       	
+       };
+      
+       scope.selectDiv = 0;
+      
+       scope.fretDiv = function($index){
+	       
+       		element.removeClass();
+
+
+	       	scope.selectDiv = $index;
+    	   	element.addClass('activeRate'+scope.selectDiv);
+
+       		console.log($index);
+       		console.log(scope.selectDiv);
+       		
        		
 
-       	
+       		
        };
-       
 
       }
     };

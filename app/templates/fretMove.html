@@ -47,15 +47,17 @@
 				</div>
 
 				<div id='fretRatioSelect' style=''>
-					<label>
-						<input type='checkbox' id='0' ng-class="{'activeRate':rate==0}" ng-click='rate=0'>One-Half (1/2)</input>
-					</label>
-					<label>
-						<input type='checkbox' id='1' ng-class="{'activeRate':rate==1}" ng-click='rate=1'>
-						One-Fourth (1/4)
-						</input>
-
-					</label>
+					<ul>
+						<li ng-repeat='ratios in fretRatios'>
+							<label>
+								<input type='button'ng-click='fretDiv(ratios.type)'>
+									{{ratios.name}} 
+								</input>
+							</label>
+						</li>
+						{{fretRate}}
+					</ul>
+					
 				</div>
 			</div>
 			
