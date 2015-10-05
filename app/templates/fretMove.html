@@ -1,11 +1,17 @@
-<div class='container'>
+<div class='container' style='
+
+	
+'>
 
 			<div id='guitarImage' style='
-				
+				border:1px solid black;
+				border-radius:15px;
 				
 			'>
+				<img src="/images/GretchSilver.jpg"/>
 				<div id='fretRange' style='
-					
+					position:relative;
+					bottom:155px;
 				'>
 					<!-- The length of this div is 420... heh. -->
 
@@ -30,37 +36,60 @@
 
 
 			</div>  
+			<br>
 			
-			<div id='fretSelection' class='container' style=''>
+	<div id='bottomContent' class='container' style='
 
-				<div id='fretSelector' class='col-md-12' style='
-					height:70%;width:30%;
+	border:3px solid black;
+	
+	 padding:10px;
+	margin:5px;
+	width:90%;
+	position:relative;
+	left:5%;
+	border-radius:15px;
+
+													 						'>
+			<div id='bottomInnerContent' style=''>										 
+				<div id='fretSelection' class='container' style=''>
+
+					<div id='fretSelector' class='col-md-12' style='
+						height:70%;width:30%;
+						float:left;
+					'>
+					
+							Select your starting fret: 
+							<ul id='fretNumList' ng-model='guitarCss' class='col-md-6' style=''>
+							<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)' style=''>
+								<div id='fretNum' style=''>{{$index}}</div>
+								</li>		
+							</ul>
+					</div>
+
+					<div id='fretRatioSelect' style='
 					float:left;
-				'>
-				
-						Select your starting fret. 
-						<ul id='fretNumList' ng-model='guitarCss' class='col-md-4' style='width:30%;'>
-						<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)' class=''>
-							<div id='fretNum' style=''>{{$index}}</div>
-							</li>		
-						</ul>
-				</div>
+					border:1px solid black;
 
-				<div id='fretRatioSelect' style=''>
-					<ul>
-						<input type='button' ng-click='fretReset()'>
-							Show All 
-							</input>
-						<li ng-repeat='ratios in fretRatios'>
+
+					'>
+						Select String Division:
+						<ul style='list-style:none;'>
 							<label>
-								<input type='button'ng-click='fretDiv(ratios.type)'>
-									{{ratios.name}} 
+							<input type='button' ng-click='fretReset()'>
+								Show All 
 								</input>
 							</label>
-						</li>
-						{{fretRate}}
-					</ul>
-					
+							<li ng-repeat='ratios in fretRatios'>
+								<label>
+									<input type='button'ng-click='fretDiv(ratios.type)'>
+										{{ratios.name}} 
+									</input>
+								</label>
+							</li>
+							{{fretRate}}
+						</ul>
+						
+					</div>
 				</div>
 			</div>
-			
+	</div>	
