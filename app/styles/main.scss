@@ -167,7 +167,7 @@ body {
 
 
 
-#fretNumList {
+/*#fretNumList {
 
     display:inline;
     width:90%;
@@ -185,7 +185,7 @@ body {
       display:inline-block;
       text-align:center;
 
-    }
+    }*/
     #fretNum:hover {
       background-color:rgba(0,0,0,0.43);
       cursor:pointer;
@@ -194,7 +194,7 @@ body {
 
 
 
-}
+/*}*/
 
 .activeRate1 {
    
@@ -240,6 +240,7 @@ body {
    
     #fretHarmzHalfMain {
       display:block;
+      border-color:#44FF22;
     }
 
     #fretHarmzThirdMain {
