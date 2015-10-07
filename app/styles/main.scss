@@ -12,6 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color:#9C9B98;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -90,7 +91,7 @@ body {
   }
 }
 #guitarImage {
-
+        background-color:#A39A82;
         border:0px solid black;
         /*height:340px;*/
         height:auto;
@@ -167,7 +168,7 @@ body {
 
 
 
-/*#fretNumList {
+#fretNumList {
 
     display:inline;
     width:90%;
@@ -185,7 +186,7 @@ body {
       display:inline-block;
       text-align:center;
 
-    }*/
+    }
     #fretNum:hover {
       background-color:rgba(0,0,0,0.43);
       cursor:pointer;
@@ -194,7 +195,7 @@ body {
 
 
 
-/*}*/
+}
 
 .activeRate1 {
    

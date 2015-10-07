@@ -1,14 +1,16 @@
 
-							Select your starting fret: 
-	<div class='btn-group'>
-		<button class='btn btn-default btn-lg dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' placeholder='Select Fret'>{{guitarFret}}
-				<span class='caret'></span>
-				</button>
-				<ul  class='col-md-6 dropdown-menu' style=''>
-					<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarFret' ng-click='fretPercent(i)' style=''>
-						<div id='fretNum' style=''>{{$index}}</div>
-					</li>		
-				</ul>
+			<div id='fretSelection' class='container' style=''>
 
-	</div>
-
+				<div id='fretSelector' class='col-md-12' style='
+					height:70%;width:30%;
+					float:left;
+					'>
+				
+						Select your starting fret. 
+						<ul id='fretNumList' ng-model='guitarCss' class='col-md-4' style=''>
+						<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)' class=''>
+							<div id='fretNum' style=''>{{$index}}</div>
+							</li>		
+						</ul>
+				</div>
+			</div>

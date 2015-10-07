@@ -22,8 +22,8 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navmenu navmenu-default navmenu-fixed-left" role="navigation">
-        <div class="container">
+      <div class="navmenu navmenu-default navmenu-fixed-left navmenu-inverse " role="navigation">
+        <div class="container-smooth">
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -33,13 +33,14 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">guitarweb</a>
+            <a class="navmenu-brand" href="#/">Personal Site Header</a>
           </div>
-
+          <br><br>
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
+            <ul class="navmenu" style='display:inline; border:none; list-style:none;
+            '>
+              <li class=""><a ng-href="#/">Home</a></li>
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/">Contact</a></li>
               <li><a ng-href='#/frets'>Harmonic Calculator</a></li>
