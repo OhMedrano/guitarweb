@@ -6,17 +6,36 @@
 					'>
 						Select String Division:
 						<ul style='list-style:none;'>
-							<label>
-							<input type='button' ng-click='fretReset()'>
-								Show All 
-								</input>
-							</label>
-							<li ng-repeat='ratios in fretRatios'>
-								<label>
-									<input type='button'ng-click='fretDiv(ratios.type)'>
+							
+							<li>
+							<div class='fretSelectIcon' style='background-color:red;
+							border:1px solid none;
+							width:15px;
+							height:15px;
+							border-radius:100%;
+							float:left;
+							position:relative;
+							top:10px;
+							margin-right:15px;'> 
+							</div>
+							<ng-click='fretReset()' style='float:left;'><p>Show All</p></ng-click>
+							</li><br><br>
+							<li ng-repeat='ratios in fretRatios' id='fretRatioLi'style='position:relative;
+							bottom:35px;'>
+									<div id='fretSelectIcon' ng-style='background-color: {{ratios.color}}'style='
+							border:1px solid none;
+							width:15px;
+							height:15px;
+							border-radius:100%;
+							float:left;
+							position:relative;
+							top:10px;
+							margin-right:15px;'> 
+							</div>
+								<ng-click='fretsDiv(ratios.type)'>
 										{{ratios.name}} 
-									</input>
-								</label>
+									</ng-click>
+								
 							</li>
 							
 						</ul>

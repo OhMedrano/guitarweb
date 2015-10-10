@@ -20,10 +20,10 @@ angular.module('guitarwebApp')
     	});
    
    $scope.fretRatios = [
-   		{'name':'One-Half ','type':1},
-   		{'name':'One-Third ','type':2},
-   		{'name':'One-Quarter ','type':3},
-   		{'name':'One-Fifth ','type':4}
+   		{'name':'One-Half ','type':1,'color':'#0000FF'},
+   		{'name':'One-Third ','type':2,'color':'#000000'},
+   		{'name':'One-Quarter ','type':3,'color':'#44FF22'},
+   		{'name':'One-Fifth ','type':4,'color':'#6622bb'}
    ];
 
  });

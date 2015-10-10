@@ -28,7 +28,7 @@ angular.module('guitarwebApp')
       
        scope.selectDiv = 0;
       
-       scope.fretDiv = function($index){
+       scope.fretsDiv = function($index){
 	       
        		element.removeClass();
 

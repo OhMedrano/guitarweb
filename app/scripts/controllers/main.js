@@ -14,4 +14,21 @@ angular.module('guitarwebApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.navList = [
+    	{
+    		'name':'Scales',
+    		'url':'scale'
+    	},
+    	{
+    		'name':'Guitar Notes',
+    		'url':'gnotes'
+    	},
+    	{
+    		'name':'Harmonic Visualizer',
+    		'url':'frets'
+    	}
+    	
+
+    ];
   });
