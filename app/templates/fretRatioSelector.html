@@ -7,9 +7,9 @@
 						Select String Division:
 						<ul style='list-style:none;'>
 							
-							<li>
+							<li ng-click='fretReset()'>
 							<div class='fretSelectIcon' style='background-color:red;
-							border:1px solid none;
+							border:13px solid red;
 							width:15px;
 							height:15px;
 							border-radius:100%;
@@ -18,26 +18,26 @@
 							top:10px;
 							margin-right:15px;'> 
 							</div>
-							<ng-click='fretReset()' style='float:left;'><p>Show All</p></ng-click>
+							Show All
 							</li><br><br>
 							<li ng-repeat='ratios in fretRatios' id='fretRatioLi'style='position:relative;
-							bottom:35px;'>
-									<div id='fretSelectIcon' ng-style='background-color: {{ratios.color}}'style='
-							border:1px solid none;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:10px;
-							margin-right:15px;'> 
+							bottom:35px;'ng-click='fretsDiv(ratios.type)'>
+							<div id='fretSelectIcon' ng-style=''style='
+										border:1px solid none;
+										width:15px;
+										height:15px;
+										border-radius:100%;
+										float:left;
+										position:relative;
+										top:10px;
+										margin-right:15px;'> 
 							</div>
-								<ng-click='fretsDiv(ratios.type)'>
+								
 										{{ratios.name}} 
-									</ng-click>
+									
 								
 							</li>
 							
 						</ul>
 						
-					</div>
+</div>

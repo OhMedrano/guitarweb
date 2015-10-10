@@ -95,7 +95,51 @@
 					</div>
 
 					<div>
-						<fret-Ratioselector></fret-Ratioselector>
+
+					<div id='fretRatioSelect' style='
+					float:left;
+					border:1px solid black;
+
+
+					'>
+						Select String Division:
+						<ul style='list-style:none;'>
+							
+							<li>
+							<div class='fretSelectIcon' style='background-color:red;
+							border:1px solid none;
+							width:15px;
+							height:15px;
+							border-radius:100%;
+							float:left;
+							position:relative;
+							top:10px;
+							margin-right:15px;'> 
+							</div>
+							<ng-click='fretReset()' style='float:left;'><p>Show All</p></ng-click>
+							</li><br><br>
+							<li ng-repeat='ratios in fretRatios' id='fretRatioLi'style='position:relative;
+							bottom:35px;'ng-click='fretsDiv(ratios.type)'>
+							<div id='fretSelectIcon' ng-style='colorz={"background-color":{{ratios.color}}}'style='
+										border:1px solid none;
+										width:15px;
+										height:15px;
+										border-radius:100%;
+										float:left;
+										position:relative;
+										top:10px;
+										margin-right:15px;'> 
+							</div>
+								
+										{{ratios.name}} 
+									
+								
+							</li>
+							
+						</ul>
+						
+</div>
+						<!-- <fret-Ratioselector></fret-Ratioselector> -->
 					</div>
 
 					

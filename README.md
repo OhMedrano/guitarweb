@@ -21,3 +21,16 @@
 		So now I gotta style it. 
 
 		
+
+10/10 - 
+		
+		Added a bunch of styling on to it. It looks good
+		 Gotta add @media tags so I can have it more responsive for different devices.
+
+		 Fixed an issue with the fret ratio selector not being clickable. 
+		 Every option except "Show All" currently works.
+		
+		 (For me later...)
+		 May have a work around with that by calling the fretRest function inside of the controller.
+
+		 (/For me later...)
