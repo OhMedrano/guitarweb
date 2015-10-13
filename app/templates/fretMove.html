@@ -62,20 +62,20 @@
 						margin-top:14px;
 						position:relative;
 						
-						text-align:right;
+						text-align:center;
 						border-right:3px solid black;
 						height:250px;
 
 
 			'>
-						<li id='bottomTools' class='bottomNavStyle' style='
+						<p id='bottomTools' class='bottomNavStyle' style='
 							font-size:18px;
 							position:relative;
 							right:20%;
 							top:20%;
 
 						'>Fret Selector & Ratio</li>
-						<li id='bottomText' class='bottomNavStyle' style='
+						<p id='bottomText' class='bottomNavStyle' style='
 							font-size:18px;
 							position:relative;
 							right:20%;
@@ -88,7 +88,7 @@
 				'>
 
 					<div id='fretSelectors' class='col-md-12' style='
-						height:70%;width:30%;
+						height:70%;width:45%;
 						float:left;
 					'>
 					 <fret-Selection></fret-Selection>
@@ -96,50 +96,8 @@
 
 					<div>
 
-					<div id='fretRatioSelect' style='
-					float:left;
-					border:1px solid black;
-
-
-					'>
-						Select String Division:
-						<ul style='list-style:none;'>
-							
-							<li>
-							<div class='fretSelectIcon' style='background-color:red;
-							border:1px solid none;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:10px;
-							margin-right:15px;'> 
-							</div>
-							<ng-click='fretReset()' style='float:left;'><p>Show All</p></ng-click>
-							</li><br><br>
-							<li ng-repeat='ratios in fretRatios' id='fretRatioLi'style='position:relative;
-							bottom:35px;'ng-click='fretsDiv(ratios.type)'>
-							<div id='fretSelectIcon' ng-style='colorz={"background-color":{{ratios.color}}}'style='
-										border:1px solid none;
-										width:15px;
-										height:15px;
-										border-radius:100%;
-										float:left;
-										position:relative;
-										top:10px;
-										margin-right:15px;'> 
-							</div>
-								
-										{{ratios.name}} 
-									
-								
-							</li>
-							
-						</ul>
-						
-</div>
-						<!-- <fret-Ratioselector></fret-Ratioselector> -->
+					
+						<fret-Ratioselector></fret-Ratioselector>
 					</div>
 
 					

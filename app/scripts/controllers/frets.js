@@ -26,6 +26,10 @@ angular.module('guitarwebApp')
    		{'name':'One-Fifth ','type':4,'color':'green'}
    ];
 
+
+   
+
+   
  });
   
   

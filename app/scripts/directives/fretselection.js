@@ -13,7 +13,12 @@ angular.module('guitarwebApp')
       templateUrl:'templates/fretSelection.html',
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
-       
+   
+      	$('#fretNum').click(function(){
+      		$(this).removeClass('highLighter');
+      		$(this).addClass('highLighter');
+
+      	});
       }
     };
   });

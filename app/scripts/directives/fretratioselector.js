@@ -12,7 +12,11 @@ angular.module('guitarwebApp')
       templateUrl:'templates/fretRatioSelector.html',
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
-        
+        var target = document.getElementById('fretNum');
+
+        $(target).click(function(){
+        	this.addClass('highLighter');
+        });
       }
     };
   });

@@ -28,8 +28,8 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+/*  border-bottom: 1px solid #e5e5e5;*/
+  /*margin-bottom: 10px;*/
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -99,6 +99,12 @@ body {
 
     font-family:'Pacifico',cursive;
 
+    #navSubMenu li:hover {
+
+      background-color:#74AABB;
+      cursor:pointer;
+
+    }
 
 
   
@@ -197,7 +203,7 @@ body {
   font-family:'Pacifico',cursive;
 
   span {
-    font-size:15px;
+    font-size:21px;
     margin:5px;
 
   }
@@ -213,17 +219,19 @@ body {
     display:inline;
     width:90%;
     list-style:none;
+    position:relative;
+    right:6%;
 
 
 
     #fretNum {
       border:1px solid black;
-      width:27%;
-      padding:3px;
+      width:14%;
+      padding:1px;
       text-align:center;
       float:left;
       margin:2px;
-      border-radius:100%;
+      border-radius:7px;
       display:inline-block;
       text-align:center;
       font-family:'Pacifico',cursive;
@@ -234,10 +242,35 @@ body {
       cursor:pointer;
 
     }
+    #fretNum:active {
+      background-color:rgba(0,0,0,0.43);
+      cursor:pointer;
+
+    }
 
 
 
 }
+
+
+/*.highLighted { 
+  background-color:#7CA0AC;
+
+
+}
+.hightLighted2 {
+  background-color:#87ACB8;
+}
+.highLighted3 { 
+  background-color:#74AABB;
+
+
+}
+.highLighted4 { 
+  background-color:#577179;
+
+
+}*/
 
 .activeRate1 {
    
@@ -325,3 +358,42 @@ body {
   
 
 }
+
+
+#fretRatioLi {
+
+
+
+        :hover {
+        background-color:#74AABB;
+        cursor:pointer;
+        }
+
+        :target{
+          background-color:#74aabb;
+
+        }
+}
+
+.highLighter {
+
+  background-color:#74AABB;
+}
+/*
+  .fretSelectionIcon:nth-of-type(1){
+  background-color:green;
+  }
+  .fretSelectionIcon:nth-of-type(2){
+  background-color:blue;
+  }
+  .fretSelectionIcon:nth-of-type(3){
+  background-color:black;
+  }
+  .fretSelectionIcon:nth-of-type(4){
+  background-color:green;
+  }
+  .fretSelectionIcon:nth-of-type(5){
+  background-color:purple;
+  }
+
+}*/
