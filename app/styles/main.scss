@@ -111,6 +111,12 @@ body {
 
   }
 #bottomInnerContentNav {
+
+  li:hover {
+    background-color:#74AABB;
+    cursor:pointer;
+  }
+
  .bottomNavStyle {
   font-family:'Pacifico',cursive;
   border-bottom:2px solid black;
@@ -183,7 +189,7 @@ body {
               .fretHarmzThird {
 
                 border:0px solid black;
-                border-right:3px solid black;
+                border-right:3px solid white;
              
                 padding:0px; 
               }
@@ -372,9 +378,24 @@ body {
        
 }
 
+
+#explainTextContent p {
+
+  font-family:'Oxygen';
+}
+
 .highLighter {
 
   background-color:#74AABB;
+}
+
+
+#explainTextNav li {
+  display:inline;
+  font-weight:bold;
+  border-bottom:1px solid black;
+  font-family:'Pacifico',cursive;
+
 }
 /*
   .fretSelectionIcon:nth-of-type(1){
