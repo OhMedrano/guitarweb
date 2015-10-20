@@ -31,6 +31,10 @@ angular
         templateUrl:'views/frets.html',
         controller: 'FretsCtrl'
       })
+      .when('/scales', {
+        templateUrl: 'views/scales.html',
+        controller: 'ScalesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
