@@ -9,9 +9,9 @@
  */
 angular.module('guitarwebApp')
   .controller('ScalesCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    
+  	$scope.musicNotes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"];
+
+  	
+
   });
