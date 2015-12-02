@@ -15,7 +15,7 @@ angular.module('guitarwebApp')
         var target = document.getElementById('fretNum');
 
         $(target).click(function(){
-        	this.addClass('highLighter');
+        	this.addClass('highLighter').fadeIn();
         });
       }
     };

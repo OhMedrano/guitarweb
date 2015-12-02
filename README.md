@@ -50,7 +50,7 @@
 		 2- "Show All" selection is currently unclickable. 
 		 		- Possible fix in "#1 For me later..."
 
-		 3- Weird Margin/Padding on the nav menu li
+		 3- Weird Margin/Padding on the nav-menu li
 
 
 		 In-Progress: 

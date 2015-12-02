@@ -22,15 +22,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header" style='padding:0px;'>
-      <div class="navmenu navmenu-default navmenu-fixed-left " id='navmenuMain' role="navigation" style='
-        background-color:#6D9DAC;
-        border:1px none;
-        z-index:0;
-        border-right:5px solid black;
-        padding:0px;
+    <div class="header col-md-12" style='padding:0px;'>
+      <div class="navmenu navmenu-default navmenu-fixed-left col-md-12" id='navmenuMain' role="navigation" style='
+      
       '>
-        <div class="container-smooth" id='navSub' style='position:relative;
+        <div class="col-md-12" id='navSub' style='position:relative;
         top:20%;'>
           <div class="navbar-header" id='navSubBrand' style='
               text-color:black;
@@ -43,39 +39,20 @@
           </div>
           <br><br>
           <div class="collapse navbar-collapse " id="js-navbar-collapse"
-               style='position:relative;
-                    padding:0px;'
+               style='display:inline;
+               float:right;'
           >
 
-            <ul class="navmenu" id='navSubMenu' style='display:inline; border:none; list-style:none;
+            <ul class="navmenu col-md-9" id='navSubMenu' style='display:inline; border:none; list-style:none;
             '>
-              <li  style ='margin-top:20px;
-                          font-size:20px;
-
-                           border:1px solid none;
-                          text-align:right;
-                          height:50px;
-                          padding:10px;
-                          width:100%;
-               'class='highLighted'><a ng-href="#/scales">Scales and Notes(In development)</a></li><br>
+              <li  style ='
+               'class='highLighted col-md-4'><a ng-href="#/scales">Scales and Notes(In development)</a></li><br>
               <li style ='
-                          font-size:20px;
-
-                          border:1px solid none;
-                          text-align:right;
-                          height:50px;
-                          padding:10px;
-                          width:100%;
-               'class='highLighted2'><a ng-href="#/frets">Chords (In development)</a></li>
+                          
+               'class='highLighted2 col-md-4'><a ng-href="#/frets">Chords (In development)</a></li>
               <li style ='
-                          font-size:20px;
-
-                          border:1px solid none;
-                          text-align:right;
-                          height:50px;
-                          padding:10px;
-                          width:100%;
-               ' class='highLighted4'><a ng-href='#/frets'>Pinch Harmonics</a></li>
+                         
+               ' class='highLighted4 col-md-4'><a ng-href='#/frets'>Pinch Harmonics</a></li>
             </ul>
           </div>
         </div>
@@ -101,7 +78,7 @@
         </div>
         </div>
         <div class='row'>
-        <div class='col-md-5'></div>
+        <div class='col-md-8'></div>
         <div ng-view="" class='col-md-6'></div>
         <div class='col-md-5'></div>
         </div>
