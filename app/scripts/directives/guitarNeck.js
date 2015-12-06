@@ -22,8 +22,7 @@ angular.module('guitarwebApp')
        		scope.selectIndex = $index + '%';
        		element.css('width',scope.selectIndex);
        		
-       		console.log($index);
-       		console.log(scope.selectIndex);
+       		
        };
       
        scope.selectDiv = 0;
@@ -36,8 +35,7 @@ angular.module('guitarwebApp')
 	       	scope.selectDiv = $index;
     	   	element.addClass('activeRate'+scope.selectDiv);
 
-       		console.log($index);
-       		console.log(scope.selectDiv);
+       		
        		
        };
        scope.fretReset = function(){

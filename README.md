@@ -63,5 +63,25 @@
 		 			- B1E0F0
 		 			- 5C6B70
 
+
+12/5 -
+
+
+
+		Alright, so it's done. 
+
+		So far it's accurate, that's what people been telling me.
+
+		Updates for the future
+
+			- Add extra guitars. (Easy to do.)
+				- ...Fix the values to match those of the scale lengths (...!@#$#!!!)
+			- Make it mobile (TBA)
+				- This is my biggest problem. I don't know how to display the data on such a small screen. 
+			- Give it a title (The hardest one of all)
+				- PHV? Pinch Harmonic Visualizer?
+			- Work on fret board.
+				- Planning to have full fretboard show notes on guitar. 
+				
 		 
 

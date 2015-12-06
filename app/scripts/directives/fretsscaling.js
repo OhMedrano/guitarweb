@@ -12,7 +12,7 @@ angular.module('guitarwebApp')
       template: '<div>Whats up</div>',
       restrict: 'EA',
       link: function postLink(scope, element, attrs) {
-        element.css('background-color','green','border','1px solid black');
+        
       }
   		}
      

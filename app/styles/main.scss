@@ -103,12 +103,13 @@ body {
 
       background-color:#74AABB;
       cursor:pointer;
+      height:70px;
 
     }
 
 
   
-
+ 
   }
 #bottomInnerContentNav {
 
@@ -125,13 +126,13 @@ body {
 }
 #guitarImage {
         background-color:#869CA3;
-        border:0px solid black;
+        
         
         padding:5px;
        /* background-image:url(/images/GretchSilver.jpg);*/
         background-size:contain;
         background-repeat:no-repeat;
-        width:150%;
+        
 
         img {
 
@@ -141,7 +142,7 @@ body {
 
         #fretRange {
 
-          border:2px solid none;
+          
           position:relative;
          
           left:7.5%;
@@ -150,7 +151,7 @@ body {
           z-index:1;
 
           #fretHarm {
-            border:1px solid none;
+           
             height:100%;
             width:626px;
             color:black;

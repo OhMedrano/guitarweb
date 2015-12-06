@@ -8,6 +8,9 @@
 				border-radius:15px;
 				border-right:3px solid black;
 				border-bottom:4px solid black;
+				width:150%;
+				position:relative;
+				left:21%;
 				
 			'>
 				<img src="/images/GretchSilver.png" class='img-responsive img-rounded'/>
@@ -52,13 +55,14 @@
 	position:relative;
 	left:25%;
 	border-radius:15px;
+
 	
 
 													 						'>
 		<div class='row'>
 			<div id='bottomInnerContent' style='padding:0px;'>										
 
-			 <ul id='bottomInnerContentNav' style=' 
+			 <ul id='bottomInnerContentNav' class='col-md-4' style=' 
 						float:left;
 						width:10%;
 						list-style:none;
@@ -87,19 +91,19 @@
 						'> Brief Rundown</li>
 						</ul>
 
-				<div id='bottomInnerContentMain' style=''>		
+				<div id='bottomInnerContentMain' class='col-md-10' style=''>		
 					<div id='fretSelection' class='container' style='
 						display:none;
 						'>
 
-						<div id='fretSelectors' class='col-md-12' style='
+						<div id='fretSelectors' class='col-md-6' style='
 							height:70%;width:45%;
 							float:left;
 						'>
 						 <fret-Selection></fret-Selection>
 						</div>
 
-						<div>
+						<div class='col-md-6'>
 
 						
 							<fret-Ratioselector></fret-Ratioselector>
@@ -109,12 +113,13 @@
 					</div>
 
 					<div id='explainText' style='
-							width:93%;
+							
 							height: 300px;
 							position:relative;
 							left:4%;							padding:0px;
 							
 							z-index:2;
+							overflow:auto;
 
 						'>
 						<div style='
@@ -128,10 +133,12 @@
 								<li id='explainTextTool' style='font-size:20px; margin-left:text-align:left;10px;margin-right:10px;'>How it works</li>
 								<li id='explainTextTheorys' style='font-size:20px; margin-left:10px;margin-right:10px;'>The Theory</li>
 						</ul>
-							<div id='explainTextContent' style=' overflow:auto;'>
-								<div id='explainTextHow' style='display:none;'>
+							<div id='explainTextContent' class='col-md-12'style=' overflow:auto;'>
+								<div id='explainTextHow' style='display:none;overflow:auto;'>
 									<p>You choose which fret you want to start off with the fret selector. From there
 										you can can select which string division you would like to see.
+										<br><br>
+										Any questions or suggestions can be sent <a class='highLighter'href='mailto:Omedrano564@gmail.com'>here</a>
 
 								<div id='explainTextHowColor'>
 									<div class='fretSelectIcon' style='background-color:red;
@@ -142,7 +149,7 @@
 																	float:left;
 																	position:relative;
 																	top:0px;
-																	margin-right:15px;'>
+																	margin-right:15px;overflow:auto;'>
 									</div> Shows all of the String Divisions
 									<br><br>
 									<div class='fretSelectIcon' style='background-color:red;
@@ -181,7 +188,10 @@
 							position:relative;
 							top:0px;
 							margin-right:15px;'></div>Shows 1/5th String Divisions
+							<br>
+							<br>
 																		</div>
+
 
 								</div>
 								<div id='explainTextTheory' style='height:250px;'>
@@ -200,6 +210,9 @@
 								    <p>Pinch harmonics works in a simliar way; instead of going the full string distance (Nut to Bridge), you'll be measuring from a variable distance (Finger to bridge) <span class='highLighter'>AND</span> pluck that harmonic.</p>
 
 								    <p>For example, if you were on the placing your finger on the 9th fret, you'll be measuring the distance from your finger to the bridge; making the node for the <span class='highLighter'>HALF</span> the length of the string around the area where the 20th fret is located.</p>
+
+
+
 								</div>
 								</div>
 							</div>
