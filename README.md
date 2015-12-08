@@ -83,5 +83,43 @@
 			- Work on fret board.
 				- Planning to have full fretboard show notes on guitar. 
 				
+
+
+12/7 - 
+
+		So stuff happened today. 
+		Personal. Rather not. 
+
+
+		Anyway back to the project. 
+
+		I've updated the freboard to have the right starting notes... 
+
+		There's two features that I need to add. 
+
+		
+
+			Have the notes light up the the notes being selected. 
+				- Be able to light up notes in a scale. (...Pretty much making the chicken before the egg).
+				- Be able to move that scale when it's fixed on a root
+				  note. (I don't know why this is my trickiest one.
+				  It should be easy, grab the string element, shift the 
+				  array while pushing the shifted out element to the back
+				  then start the scale pattern there.)
+
+			Change the starting tuning. 
+				- ...I have an idea on how to go? But I can't seem to put
+				it into words. It's simply just change the ng-model (I
+					think) to the approriate element in the scope array.
+					...And do it to all... 144... seperate... elements...
+					that need to be there individually because of the
+					positioning of the frets... (Take a look. 800+ html
+						with inline css >:C )
+
+
+
+		So uhh... let's start with the first one. 
+
+
 		 
 
