@@ -19,11 +19,19 @@ angular.module('guitarwebApp')
 
   	$scope.major = $scope.musicScale.slice(0,3);
 
-  	$scope.majorScale = [0,3,5,6,8,9,11];
+  	$scope.majorScale = [0,2,4,5,7,9,11];
   	console.log($scope.major);
   	console.log($scope.majorScale);
-  	
-  	
+  	$scope.scale = [];
+  	$scope.scales = function(notes){
+
+  		for(var i=0;i<$scope.majorScale.length;i++){
+  			$scope.scale.push(notes[$scope.majorScale[i]]);
+  		};
+  		console.log($scope.scale);
+
+  	}
+  	$scope.scales($scope.musicScale);
 
  /* 	$scope.changeTune = function(tune){
   		var tuneVal = tune;
@@ -32,29 +40,6 @@ angular.module('guitarwebApp')
 
   	}*/
 
-/*  
 
-			THIS WORKS!!
-
-	var notes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"];
-
-
-var scale = [0,2,4,5,7,9,11];
-
-console.log(notes);
-console.log(scale);
-
-var result = function(notes){
-  var results = [];
-  
-  for(var i=0;i<scale.length;i++){
-    results.push(notes[scale[i]]);
-  };
-  console.log(results);
-};
-
-result(notes);
-*/
-  	
 
   });
