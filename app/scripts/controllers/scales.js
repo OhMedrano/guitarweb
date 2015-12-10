@@ -46,6 +46,14 @@ angular.module('guitarwebApp')
   	$scope.scales($scope.musicScale);
   	console.log(angular.element('p').scope());
 
+
+  	/*
+		So below, I want to check if I can get this if statement to work. 
+		Just to see if I can compare it with the value that is already 
+		placed in that ID.
+
+
+  	*/
   	if('F'==angular.element('#note').scope()){
   		console.log('true');
   	} else
