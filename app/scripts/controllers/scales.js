@@ -17,27 +17,45 @@ angular.module('guitarwebApp')
 
   	console.log($scope.musicScale);
 
-  	$scope.major = $scope.musicScale.slice(0,3);
-
+  
+  	// Major scale formula 
   	$scope.majorScale = [0,2,4,5,7,9,11];
-  	console.log($scope.major);
+  	
+
+  	//prints out major scale formula
   	console.log($scope.majorScale);
+
+  	//make a empty scale object
   	$scope.scale = [];
+
+  	//access the fret class in scales.html 
+  	var frets = jQuery('.frets').children();
+  	
+  	//gather the notes in the scale from musicScale
   	$scope.scales = function(notes){
 
   		for(var i=0;i<$scope.majorScale.length;i++){
   			$scope.scale.push(notes[$scope.majorScale[i]]);
+  			/*	for(var x=0;x<=frets.length;)*/
   		};
+
+
   		console.log($scope.scale);
 
   	}
   	$scope.scales($scope.musicScale);
+  	console.log(angular.element('p').scope());
 
- /* 	$scope.changeTune = function(tune){
-  		var tuneVal = tune;
-
-
-
+  	if('F'==angular.element('#note').scope()){
+  		console.log('true');
+  	} else
+  	{
+  		console.log('false');
+  	};
+ /* 		
+			So what I'm trying to do is access the array value in the note ID.
+			I can't seem to access the particular value of that scope, but I 
+			can access the whole array itself. 
   	}*/
 
 
