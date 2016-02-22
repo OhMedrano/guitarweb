@@ -8,8 +8,8 @@
  * Controller of the guitarwebApp
  */
 angular.module('guitarwebApp')
-  .controller('ScalesCtrl', function ($scope) {
-    
+  .controller('ScalesCtrl', function ($scope, $rootScope) {
+    var scope = $rootScope;
   	$scope.musicNotes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"];
   	/*  arrayIndex        0   1    2   3   4    5   6    7   8   9    10   11*/
   	/*  sliceIndex        1   2    3   4   5    6   7    8   9   10   11   12 */
@@ -29,7 +29,7 @@ angular.module('guitarwebApp')
   	$scope.scale = [];
 
   	//access the fret class in scales.html 
-  	var frets = jQuery('.frets').children();
+  	var frets = jQuery('.frets').children().children('ng-binding');
   	
   	//gather the notes in the scale from musicScale
   	$scope.scales = function(notes){
@@ -43,8 +43,19 @@ angular.module('guitarwebApp')
   		console.log($scope.scale);
 
   	}
+
+  	$scope.notesFun = function(index){
+  		var index = this;
+
+  		var result = $scope.musicNotes[index];
+  		console.log(index.content);
+  		console.log(result);
+  		return result;
+  	}
+
+  	$scope.notesFun(8);
   	$scope.scales($scope.musicScale);
-  	console.log(angular.element('p').scope());
+  	console.log(frets);
 
 
   	/*
@@ -54,12 +65,7 @@ angular.module('guitarwebApp')
 
 
   	*/
-  	if('F'==angular.element('#note').scope()){
-  		console.log('true');
-  	} else
-  	{
-  		console.log('false');
-  	};
+  	
  /* 		
 			So what I'm trying to do is access the array value in the note ID.
 			I can't seem to access the particular value of that scope, but I 

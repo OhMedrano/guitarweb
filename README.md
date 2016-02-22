@@ -121,5 +121,23 @@
 		So uhh... let's start with the first one. 
 
 
+
+		so if I change the scope array of the music notes 
+
+		and make a function that accepts a variable in its callback. 
+
+		The callback will be the index for the function to search the array for the note.
+
+		var x = function(index){
+			var index = this;
+
+			var result = $scope.musicNotes[index];
+
+			return result;
+
+		};
+
+
+		This should give me the right note... 
 		 
 
