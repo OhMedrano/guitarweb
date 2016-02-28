@@ -139,5 +139,33 @@
 
 
 		This should give me the right note... 
-		 
+
+
+
+2/28 - 
+
+		Whoa man, couple of big updates.
+
+
+		First, finished the back-end. Having that work with my personal site and this one (serving static files only). 
+
+		Made a new guitar image with illustrator. Now it scales and looks a lot nicer than the really shitty cropped image. 
+
+		Second... MADE IT SOMEWHAT MOBILE. 
+
+		That... was interesting. So, for the mobile view, I rotated the guitar 90 degrees so it's up right. From there, I used the same concept as the desktop version... 'cept I ran into a problem. 
+
+		With the desktop version, the guitar's on its side. Naturally the div goes from left to right, with the right side being adjusted. 
+
+		With the mobile version, it's a different story. Since I now have to manipulate the height, I had the problem of it going from top to bottom with the bottom side being resized. I can't use that. 
+
+		So far, my work around is by using the css transform property, I flipped the div in question upside down.  
+		So now, up is down, down is up. The div now resizes from the 
+		top aka the bottom. However, 
+		it looks like its getting out of sync when it tries to go to different frets. 
+
+		I got a possible work around, we'll see. 
+
+
+		
 

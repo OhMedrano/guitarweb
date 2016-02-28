@@ -43,3 +43,21 @@
 						
 						
 </div>
+<div id=''class='hidden-md hidden-lg col-sm-12 col-xs-12'style=''>
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				Select ratio...
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='fretRatioLi' ng-click='fretReset()'>
+					Show all
+					</li>
+					<li ng-repeat='ratios in fretRatios' id='fretRatiosLi' ng-click='fretsDiv(ratios.type)'>
+						{{ratios.name}}
+					</li>
+				</ul>
+		</div>
+
+		
+</div>

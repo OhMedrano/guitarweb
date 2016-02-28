@@ -13,15 +13,25 @@ angular.module('guitarwebApp')
       restrict: 'EA',
       replace:true,
       link: function postLink(scope, element, attrs) {
-       var result;
-       var collect = [];
-        for(var x=0;x<=fretVar[0].values.length;x++){
-        	result = fretVar[0].values[x] * 708; 
-        	collect.push('The percentage is '+result+' and fret # is ' + x);
+    	scope.selectIndex = 0; 
 
-        };
-        console.log(collect);
+    	scope.fretMobilePercent = function($index){
+    		scope.selectIndex = $index + '%';
+    		element.css('height',scope.selectIndex);
+    		console.log(scope.selectIndex);
+    	};
 
+    	 scope.fretsDiv = function($index){
+	       
+       		element.removeClass();
+
+
+	       	scope.selectDiv = $index;
+    	   	element.addClass('activeRate'+scope.selectDiv);
+          console.log(scope.selectDiv);
+       		
+       		
+       };
       }
     };
   });

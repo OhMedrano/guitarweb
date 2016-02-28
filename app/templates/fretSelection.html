@@ -1,16 +1,37 @@
-
-			<div id='fretSelection' class='container' style=''>
-
-				<div id='fretSelector' class='col-md-12' style='
-					height:50%;width:50%;
-					float:left;
-					'>
+<div id='fretSelection' class='container ' style=''>
+	<div id='fretSelector' class='col-md-12 hidden-sm hidden-xs' style='
+			height:50%;width:50%;
+			float:left;
+			'>
 				
-						<span>Select your starting fret:</span> 
-						<ul id='fretNumList' ng-model='guitarCss' class='col-md-4' style=''>
-						<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)' class=''>
-							<div id='fretNum' style='font-size:19px;margin:7px;'>{{$index}}</div>
-							</li>		
-						</ul>
-				</div>
+			<span>Select your starting fret:</span> 
+				<ul id='fretNumList' ng-model='guitarCss' class='col-md-4' style=''>
+					<li ng-repeat='i in fretVar[0].widthPercent|limitTo:25' ng-model='guitarCss' ng-click='fretPercent(i)' class=''>
+							<div id='fretNum' style='font-size:19px;margin:7px;'>
+								{{$index}}
+							</div>
+					</li>		
+				</ul>
+	</div>
+
+	<div id=''class='col-xs-12 col-sm-12 hidden-md hidden-lg'style=''>
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default' type='button' id=''>
+			 Select fret... 
+			 	<span class='caret'></span>
+			 </button>
+
+			 <ul uib-dropdown-menu ng-model='guitarMobileCss'>
+			 	<li id='fretNum'ng-repeat='i in fretVar[0].widthPercent |limitTo:22' ng-model='guitarMobileCss' ng-click='fretMobilePercent(i)' class='' >
+			 	{{$index}}
+			 	</li>
+			 </ul>
 			</div>
+
+
+	</div>
+</div>
+
+
+
+

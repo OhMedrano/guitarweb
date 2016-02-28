@@ -11,7 +11,7 @@ angular.module('guitarwebApp')
     
 
     return {
-      replace:true,
+      replace:true, 
       templateUrl:'templates/guitarNeck.html',  
       restrict: 'EA',
       link: function postLink(scope, element, attrs, interpolate) {
@@ -34,7 +34,7 @@ angular.module('guitarwebApp')
 
 	       	scope.selectDiv = $index;
     	   	element.addClass('activeRate'+scope.selectDiv);
-
+          console.log(scope.selectDiv);
        		
        		
        };
