@@ -2,7 +2,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-
+.navmenu-default {
+  background:none;
+}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -158,7 +160,7 @@ body {
           position:relative;
          
           left:7.5%;
-          margin-right:10px;
+          margin-right:10apx;
           margin-left:167px; 
           z-index:1;
 
@@ -215,7 +217,7 @@ body {
 #fretRatioSelect {
 
   font-family:'Pacifico',cursive;
-  font-size:25px;
+  font-size:18px;
 
 }
 #fretSelector {
@@ -236,23 +238,22 @@ body {
 #fretNumList {
 
     display:inline;
-    width:90%;
+    
     list-style:none;
     position:relative;
-    right:6%;
-
+    
 
 
     #fretNum {
-      border:1px solid black;
-      width:14%;
+      border-bottom:1px solid black;
+      
       padding:1px;
       text-align:center;
-      float:left;
-      margin:2px;
+      
+      
      
       display:inline-block;
-      text-align:center;
+     
       font-family:'Pacifico',cursive;
 
     }

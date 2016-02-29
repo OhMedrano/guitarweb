@@ -21,17 +21,7 @@ angular.module('guitarwebApp')
     		console.log(scope.selectIndex);
     	};
 
-    	 scope.fretsDiv = function($index){
-	       
-       		element.removeClass();
-
-
-	       	scope.selectDiv = $index;
-    	   	element.addClass('activeRate'+scope.selectDiv);
-          console.log(scope.selectDiv);
-       		
-       		
-       };
+    	
       }
     };
   });

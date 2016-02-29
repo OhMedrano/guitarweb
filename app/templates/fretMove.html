@@ -13,7 +13,7 @@
 				left:21%;
 				
 			'>
-				<img src="http://localhost:3000/img/guitar/Desktop/vectorGuitar.png" class='img-responsive img-rounded'/>
+				<img src="http://159.203.107.182:3000/img/guitar/Desktop/vectorGuitar.png" class='img-responsive img-rounded'/>
 				<div id='fretRange' class=''style='
 					position:relative;
 					bottom:255px;
@@ -45,179 +45,22 @@
 			</div>  
 			<br>
 			
-	<div id='bottomContent' class='col-md-12' style='
-	
-	
-	 padding:1px;
-	margin:5px;
-	width:100%;
-	position:relative;
-	
-	
 
-	
-
-													 						'>
-		<div class='row'>
-			<div id='bottomInnerContent' class='col-md-12 col-md-offset-4' style='padding:0px;'>										
-
-			 <ul id='bottomInnerContentNav' class='col-md-4' style=' 
-						float:left;
-						width:10%;
-						list-style:none;
-						margin-top:14px;
-						position:relative;
-						padding:0px;
-						left:3%;
-						border-right:3px solid black;
-						height:250px;
-
-
-			'>
-						<li id='bottomTools' class='bottomNavStyle' style='
-							font-size:18px;
-							position:relative;
-							z-index:3;
-							top:20%;
-
-						'>Fret Selector & Ratio</li>
-						<li id='bottomText' class='bottomNavStyle' style='
-							font-size:18px;
-							position:relative;
-							z-index:3;
-							top:20%;
-
-						'> Brief Rundown</li>
-						</ul>
-
-				<div id='bottomInnerContentMain' class='col-md-10' style=''>		
-					<div id='fretSelection' class='container' style='
-						display:none;
-						'>
-
-						<div id='fretSelectors' class='col-md-6' style='
-							height:70%;width:45%;
-							float:left;
-						'>
-						 <fret-Selection></fret-Selection>
-						</div>
-
-						<div class='col-md-6'>
-
-						
-							<fret-Ratioselector></fret-Ratioselector>
-						</div>
-
-						
-					</div>
-
-					<div id='explainText' style='
-							
-							height: 300px;
-							position:relative;
-							left:4%;							padding:0px;
-							
-							z-index:2;
-							overflow:auto;
-
-						'>
-						<div style='
-						padding:0px;
-						position:relative;
-						
-						z-index:2;
-
-						'>
-							<ul id='explainTextNav' style='text-align:left;'>
-								<li id='explainTextTool' style='font-size:20px; margin-left:text-align:left;10px;margin-right:10px;'>How it works</li>
-								<li id='explainTextTheorys' style='font-size:20px; margin-left:10px;margin-right:10px;'>The Theory</li>
-						</ul>
-							<div id='explainTextContent' class='col-md-12'style=' overflow:auto;'>
-								<div id='explainTextHow' style='display:none;overflow:auto;'>
-									<p>You choose which fret you want to start off with the fret selector. From there
-										you can can select which string division you would like to see.
-										<br><br>
-										Any questions or suggestions can be sent <a class='highLighter'href='mailto:Omedrano564@gmail.com'>here</a>
-
-								<div id='explainTextHowColor'>
-									<div class='fretSelectIcon' style='background-color:red;
-																	border:7px solid red;
-																	width:15px;
-																	height:15px;
-																	border-radius:100%;
-																	float:left;
-																	position:relative;
-																	top:0px;
-																	margin-right:15px;overflow:auto;'>
-									</div> Shows all of the String Divisions
-									<br><br>
-									<div class='fretSelectIcon' style='background-color:red;
-							border:7px solid blue;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:0px;
-							margin-right:15px;'></div>Shows 1/2 String division<br><br>
-							<div class='fretSelectIcon' style='background-color:red;
-							border:7px solid white;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:0px;
-							margin-right:15px;'></div>Shows 1/3rd String Divisions<br><br>
-							<div class='fretSelectIcon' style='background-color:red;
-							border:7px solid green;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:0px;
-							margin-right:15px;'></div>Shows 1/4th String Divisions<br><br>
-							<div class='fretSelectIcon' style='background-color:red;
-							border:7px solid purple;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:0px;
-							margin-right:15px;'></div>Shows 1/5th String Divisions
-							<br>
-							<br>
-																		</div>
-
-
-								</div>
-								<div id='explainTextTheory' style='height:250px;'>
-								<div  style='overflow:auto; width:100%%;'>
-									<p> When you're playing a harmonic, any harmonic, you are actually playing
-								    playing a string at its perfect division. At its perfect ratio so to say.</p> 
-
-								    <p>Take for example the natural harmonics, the ones you play over the 12th fret. 
-								    The area where you place your finger for that harmonic is actually the perfect /
-								    near perfect half of the whole string.</p>
-
-								    <p>You can use the same example for the 5th and 7th fret harmonics since they divide the string into 3rds and 4ths respectfully.</p>
-
-								    <p>We'll call these perfect divisions "Nodes". So if you're dividing a string in half, you'll have one node aka the natural harmonic on the 12th fret. By 3rds? The node will be on the 5th fret. You get the picture.</p>
-
-								    <p>Pinch harmonics works in a simliar way; instead of going the full string distance (Nut to Bridge), you'll be measuring from a variable distance (Finger to bridge) <span class='highLighter'>AND</span> pluck that harmonic.</p>
-
-								    <p>For example, if you were on the placing your finger on the 9th fret, you'll be measuring the distance from your finger to the bridge; making the node for the <span class='highLighter'>HALF</span> the length of the string around the area where the 20th fret is located.</p>
-
-
-
-								</div>
-								</div>
-							</div>
-						</div>
-					</div>
+		<div id=''class='col-md-12 col-md-offset-4'style=''>
+				<div id=''class='col-md-4 'style='border:1px none'>
+					 <fret-Ratioselector></fret-Ratioselector>
 				</div>
-			</div>
+				<div id=''class='col-md-6 col-md-offset-2'style='border-left:1px solid black;'>
+					<fret-Selection></fret-Selection>
+
+				</div>
 		</div>
-	</div>	
+		<br>
+		<br>
+		<div id=''class='col-md-12 col-md-offset-5'style='border:1px solid black;'>
+		
+			<explain-Text></explain-Text>
+
+		</div>
+</div>
+

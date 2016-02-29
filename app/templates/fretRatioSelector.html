@@ -1,37 +1,38 @@
-<div id='fretRatioSelect' class='hidden-sm hidden-xs'style='
-					float:left;
+<div id='fretRatioSelect' class='hidden-sm hidden-xs col-md-12 col-lg-12'style='
+					
 					
 
 
-					'>
+	
 
+					'>
+				<div id=''class=''style=''>
+				<h4>Select Division</h4>
+
+					<div id=''class=''style=''>
+				 		<div id=''class='col-md-12'style=''>
+				 			Show all
+				 		</div>
+				 		<div id=''class='col-md-12'style=''ng-repeat='ratios in fretRatios'ng-click='fretsDiv(ratios.type)'>
+				 			{{ratios.name}} --- <span='float:right'>{{ratios.fract}}</span>
+				 		</div>
+				 	</div>
+				</div>
+
+<!-- 
 						Select String Division:
 						<ul style='list-style:none;'>
 							
 							<li id='fretRatioLi' ng-click='fretReset()'>
-							<div class='fretSelectIcon' style='background-color:red;
-							border:13px solid red;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:10px;
-							margin-right:15px;'> 
+							<div class='fretSelectIcon' style='
+							'> 
 							</div>
 							<div>Show All</div>
 							</li><br>
 							<li ng-repeat='ratios in fretRatios' id='fretRatioLi'style='position:relative;
 							bottom:35px;'ng-click='fretsDiv(ratios.type)'>
 								<div class='fretSelectIcon' ng-style='myColor'  style='
-							border:13px solid red;
-							width:15px;
-							height:15px;
-							border-radius:100%;
-							float:left;
-							position:relative;
-							top:10px;
-							margin-right:15px;'> 
+							'> 
 							</div>
 								
 									<div>	{{ratios.name}} <div>
@@ -39,7 +40,7 @@
 								
 							</li>
 							
-						</ul>
+						</ul> -->
 						
 						
 </div>
