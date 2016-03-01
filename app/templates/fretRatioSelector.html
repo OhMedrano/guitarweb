@@ -10,10 +10,10 @@
 				<h4>Select Division</h4>
 
 					<div id=''class=''style=''>
-				 		<div id=''class='col-md-12'style=''>
+				 		<div id='ratios'class='col-md-12'style=''>
 				 			Show all
 				 		</div>
-				 		<div id=''class='col-md-12'style=''ng-repeat='ratios in fretRatios'ng-click='fretsDiv(ratios.type)'>
+				 		<div id='ratios'class='col-md-12'style=''ng-repeat='ratios in fretRatios'ng-click='fretsDiv(ratios.type)'>
 				 			{{ratios.name}} --- <span='float:right'>{{ratios.fract}}</span>
 				 		</div>
 				 	</div>
@@ -51,10 +51,10 @@
 				<span class='caret'></span>
 			</button>
 				<ul uib-dropdown-menu>
-					<li id='fretRatioLi' ng-click='fretReset()'>
+					<li id='ratios' ng-click='fretReset()'>
 					Show all
 					</li>
-					<li ng-repeat='ratios in fretRatios' id='fretRatiosLi' ng-click='fretsDiv(ratios.type)'>
+					<li ng-repeat='ratios in fretRatios' id='ratios' ng-click='fretsDiv(ratios.type)'>
 						{{ratios.name}}
 					</li>
 				</ul>

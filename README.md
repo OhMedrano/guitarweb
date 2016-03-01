@@ -167,5 +167,27 @@
 		I got a possible work around, we'll see. 
 
 
-		
+
+2/29 -
+
+		Holy shit, I finished it. 
+
+		Finally. 
+
+
+		It's complete. 
+
+
+		The mobile version still has its kinks but they can smoothed out later. 
+		However the layout and the general display of it, is finished and functional.
+
+
+
+		The next phase is to complete the fretboard feature. 
+
+		That one is a bit complicated, but I have a general idea on how to tackle it.
+
+		 
+
+
 
