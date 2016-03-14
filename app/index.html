@@ -26,6 +26,7 @@
       <div class="navmenu navmenu-default navmenu-fixed-left col-md-10 col-md-offset-1 col-xs-12 col-sm-12" id='navmenuMain' role="navigation" style='border-bottom:3px solid black;padding:10px;border-right:1px none;
       
       '>
+        <!-- Mobile -->
         <div class='col-xs-12 col-sm-12 hidden-md hidden-lg'>
         <a class='col-xs-4' href='http://colossalOh.com '>
           <div id=''class='col-xs-12  'style='border:1px none;
@@ -43,11 +44,11 @@
           <div id=''class='col-sm-8 col-xs-12'style='border:1px none;'>
           <ul class="navmenu col-xs-12 col-sm-12" id='navSubMenu' style='display:inline-flex; border:none; list-style:none;margin:0;
             '>
-              <li  style ='
+          <!--     <li  style ='
                'class='col-xs-12 highLighted col-sm-4'><a ng-href="#/scales">Scales and Notes(In development)</a></li><br>
               <li style ='
                           
-               'class='col-xs-12 highLighted2 col-sm-4'><a ng-href="#/frets">Chords <br>(In development)</a></li>
+               'class='col-xs-12 highLighted2 col-sm-4'><a ng-href="#/frets">Chords <br>(In development)</a></li> -->
               <li style ='
                          
                ' class='col-xs-12 highLighted4 col-sm-4'><a ng-href='#/frets'>Pinch <br>Harmonics</a></li>
@@ -55,16 +56,16 @@
             
           </div>
         </div>
-
+        <!-- Desktop -->
         <div class="col-md-12 hidden-xs hidden-sm" id='navSub' style='position:relative;
         top:20%;'>
           <div class="navbar-header col-md-8 " id='navSubBrand' style='
               text-color:black;
 
-          '>
+          '><a href='http://colossalOh.com'>
 
            
- <img src='http://159.203.107.182:3000/img/main/logo.png' style='height:10vh;width:15vh;' />
+ <img src='http://159.203.107.182:3000/img/main/logo.png' style='height:10vh;width:15vh;' /></a>
           </div>
           <br><br>
           <div class="collapse navbar-collapse " id="js-navbar-collapse"
@@ -74,11 +75,11 @@
 
             <ul class="navmenu col-md-9" id='navSubMenu' style='display:inline-flex; border:none; list-style:none;margin:0;
             '>
-              <li  style ='
+            <!--   <li  style ='
                'class='highLighted col-md-4'><a ng-href="#/scales">Scales and Notes(In development)</a></li><br>
               <li style ='
                           
-               'class='highLighted2 col-md-4'><a ng-href="#/frets">Chords <br>(In development)</a></li>
+               'class='highLighted2 col-md-4'><a ng-href="#/frets">Chords <br>(In development)</a></li> -->
               <li style ='
                          
                ' class='highLighted4 col-md-4'><a ng-href='#/frets'>Pinch <br>Harmonics</a></li>
@@ -169,6 +170,9 @@
         <script src="scripts/directives/fretmovesmall.js"></script>
         <script src="scripts/directives/guitarnecks.js"></script>
         <script src="scripts/directives/explain.js"></script>
+        <script src="scripts/directives/fretboard.js"></script>
+        <script src="scripts/directives/gstring.js"></script>
+        <script src="scripts/directives/stringselection.js"></script>
         <!-- endbuild -->
 </body>
 </html>

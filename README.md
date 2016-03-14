@@ -191,3 +191,51 @@
 
 
 
+3/14 -
+
+		Ayyyyy Pi day. 
+
+		Tons of big changes. 
+
+		First, the layout is done. This is going to be a place holder layout until I decide 
+		of something cool, hip, modern... or old, vintage, with vacuum tubes all over the place. 
+
+		That doesn't sound that bad. :V
+
+		Second, I started tackling the fretboard. 
+
+		My idea for this fretboard was simple, have a virtual fretboard, that shows you 
+		the all the notes on the neck when you change tuning. 
+
+		That's the first feature, the second will be lighting up the notes you need. 
+
+		So lets say you need the notes on a given scale but have no clue where they reside in this
+		guitar tuning you decided to screw yourself with. With this, you'll be able to see chords,
+		scales, and general notes. 
+
+
+
+		What I've done so far is redo the whole fretboard. It was a mess. I had 144 different
+		elements, being positioned manually. This time around, I made a directive that's called 
+		g-String. 
+
+		(I'm real mature...)
+
+		This directive acts like a guitar string, the first element is the root note, aka the open the note.
+		The second element is the 1st fret note, so if the root is E, the 1st fret note is F.
+		This goes on until it hits the 23rd fret. Couldn't get the 24th because of bootstrap being
+		a hassle. 
+
+		 ----- I'll fix it up later once I have the whole thing up and running. 
+
+		The directive also takes in a scope value called root. This root value is dependant on the
+		value of string(name of standard guitar note here). So stringE, stringB, etc. 
+
+		------ I might change this to ng-model require and see how that goes. 
+
+
+		When the value changes, the string gets "tuned" up and down, it works. :D 
+
+		What I have to work on right now is how to get the user to change the value. 
+
+
