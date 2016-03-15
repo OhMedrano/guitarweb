@@ -10,7 +10,7 @@ angular.module('guitarwebApp')
   .directive('stringSelection', function () {
     return {
     	scope:{
-    		stringe: '@stringe',
+    		stringe: '=stringe',
     		stringb: '=stringb',
     		stringg: '=stringg',
     		stringd: '=stringd',
@@ -31,10 +31,9 @@ angular.module('guitarwebApp')
       	scope.currentNote5 = scope.musicNotes[scope.stringee];
 
 
-      	var changeNoteE = function($index){
-      		scope.stringe = $index;
-      		console.log($index);
-      	};
+  		
+      	
+  		
 
       }
     };

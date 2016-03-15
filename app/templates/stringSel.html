@@ -5,63 +5,90 @@
 					<div id=''class='col-md-12'style=''>
 					<br>
 						<div id=''class='col-md-5'style=''>
-						Top E is tuned to {{currentNote0}}
+						<span class='col-md-6'>Top E is tuned to </span> <span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{currentNote0}}</span>
+						
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChange(note)' ng-model='stringE'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-5'>B is tuned to</span> <span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{currentNote1}}</span>						
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChange(note)' ng-model='changeNote'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-5'>G is tuned to</span> <span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{currentNote2}}</span>
 
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='changeNoteE(note)'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChange(note)' ng-model='changeNote'>
 								{{note}}
 								</li>
-
+							</ul>
 						</div>
 					</div>
 					<br>
 					<div id=''class='col-md-12'style=''>
 						<div id=''class='col-md-5'style=''>
-						B is tuned to {{currentNote1}}						</div>
-						<div id=''class=''style=''>
+						<span class='col-md-5'>D is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{currentNote3}}</span>
 
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChange(note)' ng-model='changeNote'>
+								{{note}}
+								</li>
+							</ul>
 						</div>
 					</div>
 					<br>
 					<div id=''class='col-md-12'style=''>
 						<div id=''class='col-md-5'style=''>
-						G is tuned to {{currentNote2}}
+						<span class='col-md-5'>A is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{currentNote4}}</span>
 
 						</div>
-						<div id=''class=''style=''>
-
-						</div>
-					</div>
-					<br>
-					<div id=''class='col-md-12'style=''>
-						<div id=''class='col-md-5'style=''>
-						D is tuned to {{currentNote3}}
-
-						</div>
-						<div id=''class='col-md-5'style=''>
-
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChange(note)' ng-model='changeNote'>
+								{{note}}
+								</li>
+							</ul>
 						</div>
 					</div>
 					<br>
 					<div id=''class='col-md-12'style=''>
 						<div id=''class='col-md-5'style=''>
-						A string is tuned to {{currentNote4}}
+						<span class='col-md-7'>Bottom E is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{currentNote5}}</span>
 
 						</div>
-						<div id=''class=''style=''>
-
-						</div>
-					</div>
-					<br>
-					<div id=''class='col-md-12'style=''>
-						<div id=''class='col-md-5'style=''>
-						Bottom E is tuned to {{currentNote5}}
-
-						</div>
-						<div id=''class=''style=''>
-
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChange(note)' ng-model='changeNote'>
+								{{note}}
+								</li>
+							</ul>
 						</div>
 					</div>
 
