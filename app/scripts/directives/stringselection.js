@@ -16,8 +16,7 @@ angular.module('guitarwebApp')
     		stringd: '=stringd',
     		stringa: '=stringa',
     		stringee: '=stringee'
-    	},	
-    	
+    	},		
       templateUrl:'templates/stringSel.html',
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
@@ -30,11 +29,15 @@ angular.module('guitarwebApp')
       	scope.currentNote4 = scope.musicNotes[scope.stringa];
       	scope.currentNote5 = scope.musicNotes[scope.stringee];
 
+      	scope.changeNote = function(){
+      		var index = this.$index;
+      		changeNote0 = scope.musicNotes[index];
 
-  		
-      	
-  		
-
-      }
-    };
-  });
+      		return changeNote0;
+      	}
+      	scope.$watch('changeNote0',function(newVal,oldVal){
+      		scope.changeNote0 = newVal;
+      		console.log(newval,oldVal);
+      	})
+    }
+  } });

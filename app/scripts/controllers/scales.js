@@ -15,16 +15,14 @@ angular.module('guitarwebApp')
   	/*  sliceIndex        1   2    3   4   5    6   7    8   9   10   11   12 */
   	$scope.musicScale = $scope.musicNotes;
 
-  	console.log($scope.musicScale);
-
+  	
   
   	// Major scale formula 
   	$scope.majorScale = [0,2,4,5,7,9,11];
   	
 
   	//prints out major scale formula
-  	console.log($scope.majorScale);
-
+  	
   	//make a empty scale object
   	$scope.scale = [];
 
@@ -55,8 +53,7 @@ angular.module('guitarwebApp')
 
   	$scope.notesFun(8);
   	$scope.scales($scope.musicScale);
-  	console.log(frets);
-
+  	
 
   	/*
 		So below, I want to check if I can get this if statement to work. 

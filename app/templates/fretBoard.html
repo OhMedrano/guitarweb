@@ -2,22 +2,22 @@
 	<div id=''class='hidden-sm hidden-xs'>	
 		<img src='/images/Fretboard.png'style='width:100%; position:relative;z-index:1;'/>
 			<div id=''class=''style='position:relative; top:5px;padding:0;'>
-				<div id='EstringTop'class='eString'ng-init='stringE = 7'style='position:relative;bottom:225px;z-index:2;'>
-					<g-String root='stringE'></g-String>
+				<div id='EstringTop'class='eString'style='position:relative;bottom:225px;z-index:2;'>
+					<g-String root='stringE' rootnew='stringE'></g-String>
 				</div>
-				<div id='Bstring'class=''ng-init='stringB = 2 'style='position:relative;bottom:225px;z-index:2;'>
+				<div id='Bstring'class=''style='position:relative;bottom:225px;z-index:2;'>
 					<g-String root='stringB'></g-String>
 				</div>
-				<div id='Gstring'class=''ng-init='stringG = 10'style='position:relative;bottom:225px;z-index:2;'>
+				<div id='Gstring'class=''style='position:relative;bottom:225px;z-index:2;'>
 					<g-String root='stringG'></g-String>
 				</div>
-				<div id='Dstring'class=''ng-init='stringD = 5'style='position:relative;bottom:215px;z-index:2;'>
+				<div id='Dstring'class=''style='position:relative;bottom:215px;z-index:2;'>
 					<g-String root='stringD'></g-String>
 				</div>
-				<div id='Astring'class=''ng-init='string'style='position:relative;bottom:210px;z-index:2;'>
-					<g-String root='stringA = 0'></g-String>
+				<div id='Astring'class=''style='position:relative;bottom:210px;z-index:2;'>
+					<g-String root='stringA'></g-String>
 				</div>
-				<div id='EstringBottom'class='eString'ng-init='stringEe = 7'style='position:relative;bottom:205px;z-index:2;'>
+				<div id='EstringBottom'class='eString'style='position:relative;bottom:205px;z-index:2;'>
 					<g-String root='stringEe'></g-String>
 				</div>
 			</div>
@@ -26,7 +26,103 @@
 			<div id=''class='col-md-12'style='border:1px solid black;padding:1%; position:relative;
 			bottom:18vh';>
 				<div id=''class='col-md-6' style=''>
-					<string-Selection stringe='stringE' stringb='stringB' stringg='stringG' stringd='stringD' stringa='stringA' stringee='stringEe'></string-Selection>
+					<div id=''class='col-md-8'style='border-bottom:1px solid black;'>
+						Please choose the strings' root note.
+					</div>
+					<div id=''class='col-md-12'style=''>
+					<br>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-6'>Top E is tuned to </span> <span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{musicNotes[stringE]}}</span>
+						
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeE()' ng-model='stringE'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-5'>B is tuned to</span> <span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{musicNotes[stringB]}}</span>						
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' style=''ng-click='noteChangeB()' ng-model='stringB'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-5'>G is tuned to</span> <span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{musicNotes[stringG]}}</span>
+
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeG(note)' ng-model='stringG'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-5'>D is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{musicNotes[stringD]}}</span>
+
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeD(note)' ng-model='stringD'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-5'>A is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{musicNotes[stringA]}}</span>
+
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeA(note)' ng-model='stringA'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+					<br>
+					<div id=''class='col-md-12'style=''>
+						<div id=''class='col-md-5'style=''>
+						<span class='col-md-7'>E is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
+						text-align:center;'>{{musicNotes[stringEe]}}
+	</span>
+
+						</div>
+						<div id=''class='col-md-7'style=''>
+							<ul style='list-style:none;display:inline;'>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeEe()' ng-model='stringEe'>
+								{{note}}
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+ <!-- 
+					<string-Selection stringe='stringE' stringb='stringB' stringg='stringG' stringd='stringD' stringa='stringA' stringee='stringEe'></string-Selection> -->
 				</div>
 				<div id=''class='col-md-6' style=''>
 						Placeholder text
