@@ -239,3 +239,23 @@
 		What I have to work on right now is how to get the user to change the value. 
 
 
+3/16 - 
+
+		Oh man, oh man. 
+
+
+		Made tons of progress on this. 
+
+		First feature is done. Having the gString directive update the notes when the rootValue
+		changes, works. Needed to dump the stringSelection directive because it wasn't returning 
+		the data. Tbh, it's def my fault (Who else would it be since I'm alone in coding this?), 
+		since I use directives like x-zbit. 
+
+			"Hear your like directives, so we put a directive in directive inside another directive"
+
+
+		Now the next thing I have to work on is the lighting of the notes. Using ngStyle should
+		help, so time to ready the docs on that. 
+
+		
+
