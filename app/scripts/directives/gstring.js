@@ -10,8 +10,8 @@ angular.module('guitarwebApp')
   .directive('gString', function () {
     return {
     	scope:{
-    		root: '=root',
-    		newRoot: '@rootnew'
+    		root: '=root'
+    		/*scale: '=scale'*/
     	},
       templateUrl: 'templates/guitarString.html',
       restrict: 'E',
@@ -32,6 +32,15 @@ angular.module('guitarwebApp')
        	 scope.note9 = scope.musicNotes[(scope.rootValue + 9) % 12];
        	 scope.note10 = scope.musicNotes[(scope.rootValue + 10) % 12];
        	 scope.note11 = scope.musicNotes[(scope.rootValue + 11) % 12];
+
+       	 scope.notes = [scope.note0,scope.note1,scope.note2,scope.note3,scope.note4,scope.note5,scope.note6,scope.note7,scope.note8,scope.note9,scope.note10,scope.note11];
+
+       	 console.log(scope.notes);
+
+
+
+
+
        	
       	  	scope.$watch('root',function(newVal, oldVal){
       		scope.root = newVal;

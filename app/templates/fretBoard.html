@@ -119,13 +119,45 @@
 							</ul>
 						</div>
 					</div>
+					<br>
+					<div id="" d=''class='col-md-12'style='border:1px solid black'>
+						<div id=''class='col-md-4'style='border:1px solid black' ng-click='standardTune()'>
+						Standard
 
+						</div>
+						<div id=''class='col-md-4'style='border:1px solid black' ng-click='fullStep()'>
+						Full Step Down
 
+						</div>
+						<div id=''class='col-md-4'style='border:1px solid black' ng-click='openD()'>
+						Open D
+
+						</div>
+					</div>
  <!-- 
 					<string-Selection stringe='stringE' stringb='stringB' stringg='stringG' stringd='stringD' stringa='stringA' stringee='stringEe'></string-Selection> -->
 				</div>
 				<div id=''class='col-md-6' style=''>
-						Placeholder text
+						<div id=''class='col-md-12'style=''>
+							Pick your scale and scale root.
+
+							
+						</div>
+
+						<div id=''class='col-md-3'style='border:1px solid black;'>
+							<div class='col-md-12' style='text-align:center'ng-repeat='sca in allScales' ng-click='pickin(sca)'>
+							{{sca[0]}}
+							</div>
+
+						</div>
+						<div id=''class='col-md-4'style='border:1px solid black;'>
+							<div ng-repeat='tone in musicNotes' class='col-md-2'ng-model='toneValue'>
+							{{tone}}
+							</div>
+
+							{{pickedScale}} {{toneValue}}
+						</div>
+
 				</div>
 			</div>
 		</div>
