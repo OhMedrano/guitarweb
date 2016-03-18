@@ -36,15 +36,15 @@ angular.module('guitarwebApp')
       	scope.shownNotes = [];
       	scope.currentScale = [];
       	scope.emptyScale = [];
-      	
+      	scope.nameScale;
       	scope.allScales = [{"name":"Major/Ionian", "scale":[0,2,4,5,7,9,11]},
-      						{"name":"Minor/Aeonlion","scale":[0,2,3,5,7,8,10]},
+      						{"name":"Minor/Aeolian","scale":[0,2,3,5,7,8,10]},
       						{"name":"Dorian","scale":[0,2,3,5,7,9,10]},
       						{"name":"Phyrgian","scale":[0,1,3,5,7,8,10]},
       						{"name":"Lydian","scale":[0,2,4,6,7,9,11]},
       						{"name":"Myxolodian","scale":[0,2,4,5,7,9,10]},
       						{"name":"Locrian ","scale":[0,1,3,5,6,8,10]},
-      						
+
 
       						];
 
@@ -53,15 +53,15 @@ angular.module('guitarwebApp')
 
       	scope.toneValue = 3;
       	scope.pickin = function(scale){
-      		var pickedS = scale;
-
+      		var pickedS = scale.scale;
+      		var pickedName = scale.name;
       		console.log(pickedS);
-
+      		scope.nameScale = pickedName;
       		scope.pickedScale = pickedS;
 
       		console.log(scope.pickedScale);
 
-      		return scope.pickedScale
+      		return scope.pickedScale, scope.nameScale;
       	};
 
       	scope.toneSelect = function(tone){
@@ -189,7 +189,7 @@ angular.module('guitarwebApp')
       		scope.stringG = 8;
       		scope.stringD = 3;
       		scope.stringA = 10;
-      		scope.stringEE = 5;
+      		scope.stringEe = 5;
       	};
       	scope.openD = function(){
       		scope.stringE = 5;
