@@ -257,5 +257,13 @@
 		Now the next thing I have to work on is the lighting of the notes. Using ngStyle should
 		help, so time to ready the docs on that. 
 
+3/18 - 	
 		
+		Alright, lighting up the notes. 
+
+		Nearly done, got the chosenScale function to work somewhat. 
+
+		Need to see what's causing it to repeat a bunch of times.  
+
+
 

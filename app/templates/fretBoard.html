@@ -143,19 +143,30 @@
 
 							
 						</div>
+						<div id=''class='col-md-4'>
+							<div id=''class='col-md-12'style='border:1px solid black;'ng-model='pickedScale'ng-click='pickin(majorScale)'>
+								{{majorScale}}
 
-						<div id=''class='col-md-3'style='border:1px solid black;'>
-							<div class='col-md-12' style='text-align:center'ng-repeat='sca in allScales' ng-click='pickin(sca)'>
-							{{sca[0]}}
 							</div>
+							<div id=''class='col-md-12'style='border:1px solid black;'ng-model='pickedScale'ng-click='pickin(minorScale)'>
+								{{minorScale}}
 
+							</div>
 						</div>
 						<div id=''class='col-md-4'style='border:1px solid black;'>
-							<div ng-repeat='tone in musicNotes' class='col-md-2'ng-model='toneValue'>
+							<div ng-repeat='tone in musicNotes' class='col-md-2'ng-click='toneSelect($index)'>
 							{{tone}}
 							</div>
 
 							{{pickedScale}} {{toneValue}}
+							<br>
+							<div id=''class='col-md-12'ng-model='chooseScale(pickedScale, toneValue)'>
+
+
+
+							<br>
+							{{currentScale}} {{shownNotes}}
+							</div>
 						</div>
 
 				</div>

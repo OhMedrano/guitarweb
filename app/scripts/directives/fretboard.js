@@ -31,32 +31,41 @@ angular.module('guitarwebApp')
       	scope.currentNote4 = scope.musicNotes[scope.stringA];
       	
       	scope.majorScale = [0,2,4,5,7,9,11];
-
-      	scope.allScales = {
-
-      		Major: ['Major',[0,2,4,5,7,9,11]],
-      		Minor: ['Minor',[0,2,3,5,7,8,10]]
-
-
-      	};
-
-      	scope.minorScale = [];
+      	scope.minorScale = [0,2,3,5,7,8,10];
+      	scope.pickedScale = [];
+      	scope.shownNotes = [];
       	scope.currentScale = [];
       	scope.emptyScale = [];
-      
+      	
+      	scope.toneValue = 3;
+      	scope.pickin = function(scale){
+      		var pickedS = scale;
 
-      	scope.pickin = function(){
-      		var picked  = this;
-      		scope.pickedScale = picked;
+      		console.log(pickedS);
+
+      		scope.pickedScale = pickedS;
 
       		console.log(scope.pickedScale);
 
+      		return scope.pickedScale
       	};
+
+      	scope.toneSelect = function(tone){
+      		var toned = tone;
+
+      		console.log(toned);
+
+      		scope.toneValue = toned;
+      		return scope.toneValue;
+      	}
+
+
+      	// Choosing the right notes in the given scale
       	scope.chooseScale = function(scale,key){
 
       		var keyNotes = [];
-      		 
-      		var scales = scale;
+      		
+      		
       		var alteredNotes = [];
 
       		for(var x=0;x<scope.musicNotes.length-1;x++){
@@ -69,18 +78,22 @@ angular.module('guitarwebApp')
       				} 
       			}
 
-      		for(var y=0;y<scales.length;y++){
-      			keyNotes.push(alteredNotes[scales[y]]);
-
+      		for(var y=0;y<scale.length;y++){
+      			keyNotes.push(alteredNotes[scale[y]]);
+      			scope.shownNotes.push(scope.musicNotes[keyNotes[y]]);
       		};
 
       			console.log(alteredNotes);
       			console.log(keyNotes);
+      			scope.currentScale = keyNotes;
+      			console.log('This is current scale ' + scope.currentScale);
+      			console.log('The notes are '+scope.shownNotes);
+      			
       		};
+      	// End
 
 
-
-	scope.chooseScale(scope.majorScale, 10); 
+	
 
 
 /*
