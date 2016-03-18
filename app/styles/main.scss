@@ -103,9 +103,11 @@ body {
 
     #navSubMenu li:hover {
 
-      background-color:#74AABB;
+      background-color:#CCC;
+      .innerSubMenu{
+      
       cursor:pointer;
-      height:70px;
+      }
 
     }
 
