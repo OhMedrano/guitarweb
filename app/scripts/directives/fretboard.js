@@ -37,6 +37,19 @@ angular.module('guitarwebApp')
       	scope.currentScale = [];
       	scope.emptyScale = [];
       	
+      	scope.allScales = [{"name":"Major/Ionian", "scale":[0,2,4,5,7,9,11]},
+      						{"name":"Minor/Aeonlion","scale":[0,2,3,5,7,8,10]},
+      						{"name":"Dorian","scale":[0,2,3,5,7,9,10]},
+      						{"name":"Phyrgian","scale":[0,1,3,5,7,8,10]},
+      						{"name":"Lydian","scale":[0,2,4,6,7,9,11]},
+      						{"name":"Myxolodian","scale":[0,2,4,5,7,9,10]},
+      						{"name":"Locrian ","scale":[0,1,3,5,6,8,10]}
+
+      						];
+
+
+
+
       	scope.toneValue = 3;
       	scope.pickin = function(scale){
       		var pickedS = scale;
@@ -68,19 +81,19 @@ angular.module('guitarwebApp')
       		
       		var alteredNotes = [];
 
-      		for(var x=0;x<scope.musicNotes.length-1;x++){
+      		for(var x=0;x<scope.musicNotes.length;x++){
       			if(x == key){
       				alteredNotes.push(x);
-      					for(var i=1;i<scope.musicNotes.length;i++){
+      					for(var i=1;i<=scope.musicNotes.length-1;i++){
       						alteredNotes.push((x+i)%12);
       					}
 
       				} 
       			}
 
-      		for(var y=0;y<scale.length;y++){
+      		for(var y=0;y<=scale.length-1;y++){
       			keyNotes.push(alteredNotes[scale[y]]);
-      			scope.shownNotes.push(scope.musicNotes[keyNotes[y]]);
+      			
       		};
 
       			console.log(alteredNotes);
@@ -92,9 +105,14 @@ angular.module('guitarwebApp')
       		};
       	// End
 
-
+      	scope.changedScale = function(scale){
+      		for(var z=0;z<scale.length-1;z++){
+      			scope.shownNotes.push(scope.musicNotes[scope.currentScale[z]]);
+      		}
+      		console.log(scope.shownNotes);
+      	}
 	
-
+      	
 
 /*
         scope.strings = [
@@ -230,7 +248,7 @@ angular.module('guitarwebApp')
       		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
       		return scope.stringEe;
       	})*/
-      	console.log(scope.stringE);
+    
       }
     };
   });
