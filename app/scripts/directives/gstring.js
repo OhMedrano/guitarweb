@@ -38,7 +38,7 @@ angular.module('guitarwebApp')
 
        	 console.log(scope.notes);
        	 
-       	 console.log(attrs.scale); 
+       	 
 
 
 
@@ -46,32 +46,32 @@ angular.module('guitarwebApp')
 
 
        	 scope.$watch('scale',function(newVal,oldVal){
-       	 	var scaledd = [];
-       	 	scope.scale = newVal;
-       	 	
+       	 	scope.scaled = [];
+       	 	scope.scaled = angular.fromJson(newVal);
 
-
-       	 	scope.scales = scope.scale.split(',');
+       	 	scope.scaledd = angular.fromJson(scope.scale);
+/*	
+       	 	scope.scales = attrs.scale.split(',');
        	 	
-       	 	scope.scaless = scope.scale.replace(/[\])}[{(]/g, '');
+       	 	scope.scaless = attrs.scale.replace(/[\])}[{(]/g, '');
 
        	 	scope.scalesss = scope.scaless.split(',');
 
-       	 	scope.scaled = scope.scalesss;
+       	 	scope.scaled = scope.scalesss;*/
 
 
        	 	
 
-      		
+      		console.log(angular.fromJson(scope.scale),scope.scaledd);
 
 
 
 
 
        	 	
-
+/*
        	 	console.log(scope.scaled,scaledd ,scope.scalesss[6]);
-       		return scope.scaled;
+       		return scope.scaled;*/
        	 });
        	 
 
