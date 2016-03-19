@@ -11,7 +11,7 @@ angular.module('guitarwebApp')
     return {
     	scope:{
     		root: '=root',
-    		scale: '=scale'
+    		scale: '@scale'
     	},
       templateUrl: 'templates/guitarString.html',
       restrict: 'E',
@@ -34,12 +34,46 @@ angular.module('guitarwebApp')
        	 scope.note11 = scope.musicNotes[(scope.rootValue + 11) % 12];
 
        	 scope.notes = [scope.note0,scope.note1,scope.note2,scope.note3,scope.note4,scope.note5,scope.note6,scope.note7,scope.note8,scope.note9,scope.note10,scope.note11];
-      
+       	 scope.scaled = [];
 
        	 console.log(scope.notes);
        	 
+       	 console.log(attrs.scale); 
 
-       	 console.log(scope.scale);
+
+
+
+
+
+       	 scope.$watch('scale',function(newVal,oldVal){
+       	 	var scaledd = [];
+       	 	scope.scale = newVal;
+       	 	
+
+
+       	 	scope.scales = scope.scale.split(',');
+       	 	
+       	 	scope.scaless = scope.scale.replace(/[\])}[{(]/g, '');
+
+       	 	scope.scalesss = scope.scaless.split(',');
+
+       	 	scope.scaled = scope.scalesss;
+
+
+       	 	
+
+      		
+
+
+
+
+
+       	 	
+
+       	 	console.log(scope.scaled,scaledd ,scope.scalesss[6]);
+       		return scope.scaled;
+       	 });
+       	 
 
 
 
