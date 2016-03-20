@@ -33,12 +33,27 @@ angular.module('guitarwebApp')
        	 scope.note10 = scope.musicNotes[(scope.rootValue + 10) % 12];
        	 scope.note11 = scope.musicNotes[(scope.rootValue + 11) % 12];
 
+       	  scope.notes0 = scope.rootValue;
+       	 scope.notes1 = (scope.rootValue + 1) % 12;
+       	 scope.notes2 = (scope.rootValue + 2) % 12;
+       	 scope.notes3 = (scope.rootValue + 3) % 12;
+       	 scope.notes4 = (scope.rootValue + 4 )% 12;
+       	 scope.notes5 = (scope.rootValue + 5) % 12;
+       	 scope.notes6 = (scope.rootValue + 6) % 12;
+       	 scope.notes7 = (scope.rootValue + 7) % 12;
+       	 scope.notes8 = (scope.rootValue + 8) % 12;
+       	 scope.notes9 = (scope.rootValue + 9) % 12;
+       	 scope.notes10 = (scope.rootValue + 10) % 12;
+       	 scope.notes11 = (scope.rootValue + 11) % 12;
+
+       	 console.log('scope.notes0 is ' + scope.notes0);
+
        	 scope.notes = [scope.note0,scope.note1,scope.note2,scope.note3,scope.note4,scope.note5,scope.note6,scope.note7,scope.note8,scope.note9,scope.note10,scope.note11];
        	 scope.scaled = [];
 
        	 console.log(scope.notes);
        	 
-       	 
+
 
 
 
@@ -49,7 +64,7 @@ angular.module('guitarwebApp')
        	 	scope.scaled = [];
        	 	scope.scaled = angular.fromJson(newVal);
 
-       	 	scope.scaledd = angular.fromJson(scope.scale);
+       	 	
 /*	
        	 	scope.scales = attrs.scale.split(',');
        	 	
@@ -98,6 +113,21 @@ angular.module('guitarwebApp')
        	 scope.note9 = scope.musicNotes[(scope.rootValue + 9) % 12];
        	 scope.note10 = scope.musicNotes[(scope.rootValue + 10) % 12];
        	 scope.note11 = scope.musicNotes[(scope.rootValue + 11) % 12];
+
+
+       	 scope.notes0 = scope.rootValue;
+       	 scope.notes1 = (scope.rootValue + 1) % 12;
+       	 scope.notes2 = (scope.rootValue + 2) % 12;
+       	 scope.notes3 = (scope.rootValue + 3) % 12;
+       	 scope.notes4 = (scope.rootValue + 4 )% 12;
+       	 scope.notes5 = (scope.rootValue + 5) % 12;
+       	 scope.notes6 = (scope.rootValue + 6) % 12;
+       	 scope.notes7 = (scope.rootValue + 7) % 12;
+       	 scope.notes8 = (scope.rootValue + 8) % 12;
+       	 scope.notes9 = (scope.rootValue + 9) % 12;
+       	 scope.notes10 = (scope.rootValue + 10) % 12;
+       	 scope.notes11 = (scope.rootValue + 11) % 12;
+
 
       		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
       		return scope.root;

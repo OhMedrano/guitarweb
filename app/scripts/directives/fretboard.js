@@ -141,6 +141,7 @@ angular.module('guitarwebApp')
       		scope.stringB = this.$index;
       		console.log(newNote)
       		console.log(scope.stringe);
+
       		return scope.stringe;
       	};
       	  scope.noteChangeG = function(){

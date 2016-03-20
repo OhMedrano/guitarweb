@@ -263,7 +263,26 @@
 
 		Nearly done, got the chosenScale function to work somewhat. 
 
-		Need to see what's causing it to repeat a bunch of times.  
+		Need to see what's causing it to repeat a bunch of times. 
+
+
+
+3/20 - 
+		
+		And now, finished it.
+
+		As a proof of concept, it looks really good. Totally functional. 
+
+		As a final product, it looks disgusting. 
+
+		All the technical work such as transfering the data and making the
+		notes light up, are done. 
+
+		All that is left is styling the UI. 
+
+		And did you notice that all of these sentences started with A? 
+
+
 
 
 
