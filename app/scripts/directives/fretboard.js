@@ -13,11 +13,8 @@ angular.module('guitarwebApp')
       replace:true,
       restrict: 'E',
       link: function postLink(scope, element, attrs) {
-        scope.musicNotes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"];
+        scope.musicNotes = ["A","A#/Bb","B","C","C#/Db","D","D#/Eb","E","F","F#/Gb","G","G#/Ab"];
        
-        /*scope.allScales = Scale.query({scaleId:$routeParams.scaleId});*/
-
-
 
 
         scope.stringE = 7;
@@ -40,22 +37,26 @@ angular.module('guitarwebApp')
       	scope.currentScale = scope.majorScale;
       	scope.emptyScale = [];
       	scope.nameScale;
-      	scope.allScales = [
-      						{'name':"Major/Ionian", "scale":[0,2,4,5,7,9,11]},
-      						{'name':"Minor/Aeolian","scale":[0,2,3,5,7,8,10]},
-      						{'name':"Dorian","scale":[0,2,3,5,7,9,10]},
-      						{'name':"Phyrgian","scale":[0,1,3,5,7,8,10]},
-      						{'name':"Lydian","scale":[0,2,4,6,7,9,11]},
-      						{'name':"Myxolydian","scale":[0,2,4,5,7,9,10]},
-      						{'name':"Locrian","scale":[0,1,3,5,6,8,10]},
-      						{'name':"Minor Pentatonic","scale":[0,3,5,7,10]},
-      						{'name':"Major Pentatonic","scale":[0,2,4,7,9]},
-      						{'name':"Minor Blues","scale":[0,3,5,6,7,10]},
-      						{'name':"Harmonic Minor","scale":[0,2,3,5,7,8,11]},
-      					];
+      	scope.allScale = [
+                          {"name":"Major/Ionian","scale":[0,2,4,5,7,9,11]},
+      						        {"name":"Minor/Aeolian","scale":[0,2,3,5,7,8,10]},
+      						        {"name":"Dorian","scale":[0,2,3,5,7,9,10]},
+      						        {"name":"Phrygian","scale":[0,1,3,5,7,8,10]},
+      						        {"name":"Lydian","scale":[0,2,4,6,7,9,11]},
+      						        {"name":"Mixolydian","scale":[0,2,4,5,7,9,10]},
+      						        {"name":"Locrian","scale":[0,1,3,5,6,8,10]},
+      						        {"name":"Minor Pentatonic","scale":[0,3,5,7,10]},
+      						        {"name":"Major Pentatonic","scale":[0,2,4,7,9]},
+      						        {"name":"Minor Blues","scale":[0,3,5,6,7,10]},
+      						        {"name":"Harmonic Minor","scale":[0,2,3,5,7,8,11]},
+      						        {"name":"Melodic Minor","scale":[0,2,3,5,7,9,11]},
+      						        {"name":"Diminished / 8-Tone","scale":[0,2,3,5,6,8,11]}
 
 
-console.log(scope.allScales);
+      						];
+
+
+      	scope.selectedHigh = 
 
       	scope.toneValue = 3;
       	scope.pickin = function(scale){
@@ -131,13 +132,40 @@ console.log(scope.allScales);
         	"Ee": 7
 
         ];
-
+		
         console.log(scope.strings);*/
+        //Active toggles for string tuning
+        scope.toggleObjecte = {item:-1};
+        scope.toggleObjectb = {item:-1};
+        scope.toggleObjectg = {item:-1};
+        scope.toggleObjectd = {item:-1};
+        scope.toggleObjecta = {item:-1};
+        scope.toggleObjectee = {item:-1};
+
+        //Active toggles for whole tuning
+        scope.toggleTuning = {item:-1};
+
+
+        //
+
+        //active Toggles for scales
+        scope.toggleScale = {item:-1};
+
+
+
+        //
+
+        //active toggle for tone selection
+        scope.toggleTune = {item:-1};
+        //
         //Individual string note change functions cause I'm a noob...
+        
         scope.noteChangeE = function(){
+      		
       		var newNote = this;
       		scope.stringE = this.$index;
-      		console.log(newNote)
+      		console.log(newNote);
+      		
 
 
       		
@@ -189,8 +217,37 @@ console.log(scope.allScales);
       		scope.stringD = 5;
       		scope.stringA = 0;
       		scope.stringEe = 7;
+      		
       	};
-      	scope.fullStep = function(){
+          scope.dTune = function(){
+         scope.stringE = 5;
+          scope.stringB = 0;
+          scope.stringG = 8;
+          scope.stringD = 3;
+          scope.stringA = 11;
+          scope.stringEe = 5;
+          
+        };
+          scope.cTuned = function(){
+          scope.stringE = 3;
+          scope.stringB = 10;
+          scope.stringG = 6;
+          scope.stringD = 1;
+          scope.stringA = 8;
+          scope.stringEe = 3;
+          
+        };
+          scope.bTuned = function(){
+          scope.stringE = 2;
+          scope.stringB = 11;
+          scope.stringG = 5;
+          scope.stringD = 0;
+          scope.stringA = 7;
+          scope.stringEe = 2;
+          
+        };
+      	//Regular Tunings
+        scope.fullStep = function(){
       		scope.stringE = 5;
       		scope.stringB = 0;
       		scope.stringG = 8;
@@ -198,6 +255,57 @@ console.log(scope.allScales);
       		scope.stringA = 10;
       		scope.stringEe = 5;
       	};
+          scope.minorThird = function(){
+          scope.stringE = 6;
+          scope.stringB = 3;
+          scope.stringG = 0;
+          scope.stringD = 9;
+          scope.stringA = 6;
+          scope.stringEe = 3;
+        };
+          scope.allFourth = function(){
+          scope.stringE = 7;
+          scope.stringB = 3;
+          scope.stringG = 8;
+          scope.stringD = 5;
+          scope.stringA = 0;
+          scope.stringEe = 8;
+        };
+          scope.majorSixth = function(){
+          scope.stringE = 0;
+          scope.stringB = 3;
+          scope.stringG = 6;
+          scope.stringD = 9;
+          scope.stringA = 0;
+          scope.stringEe = 3;
+        };
+
+        //Open Tunings
+
+        scope.openA = function(){
+          scope.stringE = 7;
+          scope.stringB = 0;
+          scope.stringG = 7;
+          scope.stringD = 4;
+          scope.stringA = 0;
+          scope.stringEe = 7; 
+        }
+        scope.openB = function(){
+          scope.stringE = 6;
+          scope.stringB = 2;
+          scope.stringG = 9;
+          scope.stringD = 2;
+          scope.stringA = 9;
+          scope.stringEe = 2; 
+        }
+        scope.openC = function(){
+          scope.stringE = 7;
+          scope.stringB = 3;
+          scope.stringG = 10;
+          scope.stringD = 3;
+          scope.stringA = 10;
+          scope.stringEe = 3; 
+        }
       	scope.openD = function(){
       		scope.stringE = 5;
       		scope.stringB = 0;
@@ -206,21 +314,66 @@ console.log(scope.allScales);
       		scope.stringA = 0;
       		scope.stringEe = 5;
       	};
+        //End
 
+        //Weird tuning
 
+        scope.daddad = function(){
+          scope.stringE = 5;
+          scope.stringB = 0;
+          scope.stringG = 5;
+          scope.stringD = 5;
+          scope.stringA = 0;
+          scope.stringEe = 5;
+        }
 
+        scope.cello = function(){
+          scope.stringE = 7;
+          scope.stringB = 2;
+          scope.stringG = 0;
+          scope.stringD = 5;
+          scope.stringA = 11;
+          scope.stringEe = 7;
+        }
+
+        scope.hotType = function(){
+          scope.stringE = 5;
+          scope.stringB = 0;
+          scope.stringG = 9;
+          scope.stringD = 7;
+          scope.stringA = 2;
+          scope.stringEe = 0;
+        }
+
+        scope.augFourth = function(){
+          scope.stringE = 9;
+          scope.stringB = 3;
+          scope.stringG = 9;
+          scope.stringD = 3;
+          scope.stringA = 9;
+          scope.stringEe = 3;
+        }
+
+      	//
+
+      	//Jquery shit
+      		$('.selectedTune').click(function(){
+      			$('#selectTune').children().removeClass('highLigh');
+      			$(this).addClass('highLigh');
+      		})
 
       	//
 
 
 
-      	scope.$watchGroup(['stringE','stringB','stringG','stringD','stringA','stringEe'],function(newVal, oldVal){
+      	scope.$watchGroup(['stringE','stringB','stringG','stringD','stringA','stringEe','toggleObjecte'],function(newVal, oldVal){
       		scope.stringE = newVal[0];
       		scope.stringB = newVal[1];
       		scope.stringG = newVal[2];
       		scope.stringD = newVal[3];
       		scope.stringA = newVal[4];
       		scope.stringEe = newVal[5];
+      		scope.toggleObjecte = newVal[6];
       		console.log(newVal, oldVal);
       		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
       		return scope.stringE;

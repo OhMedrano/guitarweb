@@ -1,7 +1,29 @@
 <div id=''class=''style='width:100%;height:40%;padding:5px;'>
+	<div id=''class='hidden-sm hidden-xs'style='width:1650px;'>
+
+
+
+
+	
+
+
+
 	<div id=''class='hidden-sm hidden-xs'style='width:1650px;'>	
+		
+	<div id='leftHand'class='hidden-md hidden-lg'style=''>
+		<img src='/images/leftHandFret.png' style="width:99.8%;position:relative;z-index:1;top:0;"/>
+
+	</div>
+
+
+
+
+
+
+
+	<div id='rightHand'class=''style=''>
 		<img src='/images/Fretboard.png'style='width:99.8%; position:relative;z-index:1;border:3px solid #ccc;'/>
-			
+		
 		<div id=''class=''style=''>
 
 		</div>
@@ -12,26 +34,26 @@
 				<div id='Bstring'class=''style='position:relative;bottom:225px;z-index:2;'>
 					<g-String root='stringB'class='col-md-12'scale='{{currentScale}}'></g-String>
 				</div>
-				<div id='Gstring'class=''style='position:relative;bottom:225px;z-index:2;'>
+				<div id='Gstring'class=''style='position:relative;bottom:215px;z-index:2;'>
 					<g-String root='stringG'class='col-md-12'scale='{{currentScale}}'></g-String>
 				</div>
-				<div id='Dstring'class=''style='position:relative;bottom:215px;z-index:2;'>
+				<div id='Dstring'class=''style='position:relative;bottom:205px;z-index:2;'>
 					<g-String root='stringD'class='col-md-12'scale='{{currentScale}}'></g-String>
 				</div>
-				<div id='Astring'class=''style='position:relative;bottom:210px;z-index:2;'>
+				<div id='Astring'class=''style='position:relative;bottom:195px;z-index:2;'>
 					<g-String root='stringA'class='col-md-12'scale='{{currentScale}}'></g-String>
 				</div>
-				<div id='EstringBottom'class='eString'style='position:relative;bottom:205px;z-index:2;'>
+				<div id='EstringBottom'class='eString'style='position:relative;bottom:185px;z-index:2;'>
 					<g-String root='stringEe'class='col-md-12'scale='{{currentScale}}'></g-String>
 				</div>
 			</div>
-
+</div>
 
 			<div id=''class='col-md-12'style='border-bottom:1px solid black;padding:1%; position:relative;
 			bottom:18vh';>
-				<div id=''class='col-md-7' style=''>
-					<div id=''class='col-md-8'style='border-bottom:1px solid black;'>
-						Please choose the strings' root note.
+				<div id=''class='col-md-7' style='font-size:12px;'>
+					<div id=''class='col-md-8'style=''>
+						<h4>Please choose the strings' root note.</h4>
 					</div>
 					<div id=''class='col-md-12'style='border-bottom:1px solid black;margin-bottom:4px;'>
 					<br>
@@ -42,7 +64,7 @@
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeE()' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-model='stringE'high-Light>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='toggleObjecte.item = $index;noteChangeE()' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-class="{'highLigh':toggleObjecte.item == $index}"high-Light>
 								{{note}}
 								</li>
 							</ul>
@@ -56,7 +78,7 @@
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeB()' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-model='stringB'high-Light>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='toggleObjectb.item = $index;noteChangeB()' style='border-right:1px none;padding-left:2px;padding-right:2px;text-align:left;'ng-class="{'highLigh':toggleObjectb.item == $index}"high-Light>
 								{{note}}
 								</li>
 							</ul>
@@ -71,14 +93,14 @@
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeG(note)' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-model='stringG'high-Light>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='toggleObjectg.item = $index;noteChangeG(note)' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-class="{'highLigh':toggleObjectg.item == $index}"high-Light>
 								{{note}}
 								</li>
 							</ul>
 						</div>
 					</div>
 					<br>
-					<div id=''class='col-md-12'style=''>
+					<div id=''class='col-md-12'style='border-bottom:1px solid black'>
 						<div id=''class='col-md-5'style=''>
 						<span class='col-md-5'>D is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
 						text-align:center;'>{{musicNotes[stringD]}}</span>
@@ -86,14 +108,14 @@
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeD(note)' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-model='stringD'high-Light>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='toggleObjectd.item = $index;noteChangeD(note)' style='border-right:1px none;padding-left:3px;padding-right;3px;'ng-class="{'highLigh':toggleObjectd.item == $index}"high-Light>
 								{{note}}
 								</li>
 							</ul>
 						</div>
 					</div>
 					<br>
-					<div id=''class='col-md-12'style=''>
+					<div id=''class='col-md-12'style='border-bottom:1px solid black'>
 						<div id=''class='col-md-5'style=''>
 						<span class='col-md-5'>A is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
 						text-align:center;'>{{musicNotes[stringA]}}</span>
@@ -101,14 +123,14 @@
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeA(note)' style='border-right:1px none;padding-left:3px;padding-right:3px;'ng-model='stringA'high-Light>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='toggleObjecta.item = $index;noteChangeA(note)' style='border-right:1px none;padding-left:3px;padding-right:3px;'ng-class="{'highLigh':toggleObjecta.item == $index}"high-Light>
 								{{note}}
 								</li>
 							</ul>
 						</div>
 					</div>
 					<br>
-					<div id=''class='col-md-12'style=''>
+					<div id=''class='col-md-12'style='border-bottom:1px solid black'>
 						<div id=''class='col-md-5'style=''>
 						<span class='col-md-7'>E is tuned to </span><span class='col-md-3' style='float:right;border-right:1px solid black;border-left:1px solid black;
 						text-align:center;'>{{musicNotes[stringEe]}}
@@ -117,48 +139,101 @@
 						</div>
 						<div id=''class='col-md-7'style=''>
 							<ul style='list-style:none;display:inline;'>
-								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='noteChangeEe()'style='border-right:1px none;padding-left:3px;padding-right;3px;' ng-model='stringEe'high-Light>
+								<li ng-repeat='note in musicNotes'class='col-md-1' ng-click='toggleObjectee.item = $index;noteChangeEe()'style='border-right:1px none;padding-left:3px;padding-right;3px;' ng-class="{'highLigh':toggleObjectee.item == $index}"high-Light>
 								{{note}}
 								</li>
 							</ul>
 						</div>
 					</div>
 					<br>
-					<div id="" d=''class='col-md-12'style='border-top:1px solid black'>
-						<div id=''class='col-md-4'style='border-right:1px solid black' ng-click='standardTune()'high-Light>
+					<div id="selectTune" class='col-md-12'style='border-top:1px solid black;text-align:center;'>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px none' ng-click='standardTune()'high-Light>
 						Standard
 
 						</div>
-						<div id=''class='col-md-4'style='border-right:1px solid black' ng-click='fullStep()'high-Light>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black;border-left:1px solid black;' ng-click='fullStep()'high-Light>
 						Full Step Down
 
 						</div>
-						<div id=''class='col-md-4'style='border:1px none' ng-click='openD()'high-Light>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black;' ng-click='openA()'high-Light>
+						Open A
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='daddad()'high-Light>
+						DADDAD
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px none' ng-click='dTune()'high-Light>
+						D tuning
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black;border-left:1px solid black;' ng-click='minorThird()'high-Light>
+						Minor Third
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='openB()'high-Light>
+						Open B
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='cello()'high-Light>
+						Cello/Standard 
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border:1px none' ng-click='cTuned()'high-Light>
+						C Tuning
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black;border-left:1px solid black;' ng-click='allFourth()'high-Light>
+						All Fourths
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='openC()'high-Light>
+						Open C
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border:1px none' ng-click='hotType()'high-Light>
+						Hot Type
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border:1px none' ng-click='bTuned()'high-Light>
+						B Tuning
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black;border-left:1px solid black;' ng-click='majorSixth()'high-Light>
+						Major Sixth
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='openD()'high-Light>
 						Open D
+
+						</div>
+						<div id=''class='col-md-3 selectedTune'style='border:1px none' ng-click='augFourth()'high-Light>
+						Augemented Fourths
 
 						</div>
 					</div>
  <!-- 
 					<string-Selection stringe='stringE' stringb='stringB' stringg='stringG' stringd='stringD' stringa='stringA' stringee='stringEe'></string-Selection> -->
 				</div>
-				<div id=''class='col-md-4' style=''>
+
+				<!-- Right side -->
+				<div id=''class='col-md-5' style=''>
 						<div id=''class='col-md-12'style=''>
 							<h4>Pick your scale and scale root.</h4>
 
 							
 						</div>
 						<br>
-						<div id=''class='col-md-4' style='overflow:auto; height:150px;border:1px solid black;'>
+						<div id=''class='col-md-4' style='overflow:auto;border:1px none;height:200px;'>
 
-							<div id=''class='col-md-12'style='border-bottom:1px solid black;'ng-repeat='scale in allScales'ng-model='pickedScale'ng-click='pickin(scale)'high-Light>
+							<div id=''class='col-md-12'style='border-bottom:1px solid black;'ng-repeat='scale in allScale'ng-model='pickedScale'ng-click='pickin(scale);toggleScale.item = $index'ng-class="{'highLigh':toggleScale.item == $index}"high-Light>
 								{{scale.name}}
 
 							</div>
 							
 						</div>
-						<div id=''class='col-md-7'style=''>
+						<div id=''class='col-md-8'style=''>
 						<div id=''class='col-md-12'style='border-bottom:1px solid black'>
-							<div ng-repeat='tone in musicNotes' class=' col-md-2'ng-click='toneSelect($index)'high-Light>
+							<div ng-repeat='tone in musicNotes' class=' col-md-2'ng-click='toneSelect($index);toggleTune.item = $index'ng-class="{'highLigh':toggleTune.item == $index}"high-Light>
 							{{tone}}
 							</div>
 
@@ -175,10 +250,8 @@
 							</div>
 							<br>
 							<div id=''class='col-md-12'>
-								<div class='col-md-5'>
-									Current Notes: 
-								</div>
-								<div class='col-md-1'ng-repeat='cNote in currentScale'>
+								
+								<div class='col-md-1'ng-repeat='cNote in currentScale' style='font-size:12px;margin-right:3%;text-align:left;'>
 								{{musicNotes[cNote]}}
 								</div>
 							</div>

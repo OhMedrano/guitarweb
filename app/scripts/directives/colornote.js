@@ -17,7 +17,15 @@ angular.module('guitarwebApp')
       link: function postLink(scope, element, attrs) {
         element.css('border','1px none');
         console.log('the fuck');
+        scope.musicNotes = ["A","A#/Bb","B","C","C#/Db","D","D#/Eb","E","F","F#/Gb","G","G#/Ab"];
         
+        scope.flatten = function(note){
+          for(var x=0;x<=scope.musicNotes.length-1;x++){
+            if(note==1){
+             return element.text(""+scope.musicNotes[x+1]+"b");
+            }
+          };
+        };
 
         scope.not = scope.note;
 
@@ -56,6 +64,7 @@ angular.module('guitarwebApp')
           scope.not = scope.note;
 
           scope.coloredNote(scope.not, scope.scaleNote);
+          
 
           console.log('This note is ' + scope.not);
           console.log(angular.fromJson(scope.stuff),scope.scaleNote);

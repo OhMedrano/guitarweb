@@ -55,6 +55,11 @@ angular.module('guitarwebApp')
   	$scope.scales($scope.musicScale);
   	
 
+    $scope.highLighted = {
+      "background-color":"#ccc",
+
+    };
+
   	/*
 		So below, I want to check if I can get this if statement to work. 
 		Just to see if I can compare it with the value that is already 

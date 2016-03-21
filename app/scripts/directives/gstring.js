@@ -17,8 +17,13 @@ angular.module('guitarwebApp')
       restrict: 'E',
      
       link: function postLink(scope, element, attrs) {
-       		scope.musicNotes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"];
-       		console.log(scope.root);
+       		 element.css({
+                        fontSize:"12px",
+                        borderRight:'1px solid black'
+                   });
+
+                   scope.musicNotes = ["A","A#/Bb","B","C","C#/Db","D","D#/Eb","E","F","F#/Gb","G","G#/Ab"];
+                   console.log(scope.root);
        	 scope.rootValue = scope.root;
        	 scope.note0 = scope.musicNotes[scope.rootValue];
        	 scope.note1 = scope.musicNotes[(scope.rootValue + 1) % 12];
