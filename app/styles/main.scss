@@ -16,8 +16,10 @@ a{
   color:black;
 }
 body {
+  max-height:1520px;
   padding: 0;
  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGklEQVQYlWOIKLshhQszIAMMAVxgWCkcOAAAxmkWwZZfFWUAAAAASUVORK5CYII=);
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -95,7 +97,10 @@ body {
     border-bottom: 0;
   }
 }
-
+.highLigh {
+  background-color:#ccc;
+  cursor:pointer;
+}
 #navSub {
 
 

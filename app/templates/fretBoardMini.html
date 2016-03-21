@@ -1,0 +1,176 @@
+<div id=''class=''style='position:relative;max-;height:100vh;'>
+	
+	 <img src='images/fretBoardVertical.png'style='height:1290px;width:320%;
+	 												position:relative;
+	 												right:105%;z-index:0;'/>
+
+	<div id=''class='col-xs-12'style='position:relative;bottom:1290px;z-index:2;right:10%;'>
+
+		<gstring-Mini scale='{{currentScale}}' root='stringE'id=''class='col-xs-2'style='border:1px none;
+										text-align:center;
+										'>
+		
+
+		</gstring-Mini>
+		<gstring-Mini scale='{{currentScale}}' root='stringB'id=''class='col-xs-2'style='border:1px none;
+										text-align:center;
+										height:1290px;'>
+		
+
+		</gstring-Mini>
+		<gstring-Mini scale='{{currentScale}}' root='stringG'id=''class='col-xs-2'style='border:1px none;
+										text-align:center;
+										height:1290px;'>
+		
+
+		</gstring-Mini>
+		<gstring-Mini scale='{{currentScale}}' root='stringD'id=''class='col-xs-2'style='border:1px none;
+										text-align:center;
+										height:1290px;'>
+		
+
+		</gstring-Mini>
+		<gstring-Mini scale='{{currentScale}}' root='stringA'id=''class='col-xs-2'style='border:1px none;
+										text-align:center;
+										height:1290px;'>
+		
+
+		</gstring-Mini>
+		<gstring-Mini scale='{{currentScale}}' root='stringEe'id=''class='col-xs-2'style='border:1px none;
+										text-align:center;
+										height:1290px;'>
+		
+
+		</gstring-Mini>
+	
+	</div>
+	
+
+	<div id=''class='col-xs-12'style='border:1px solid black;position:relative;bottom:1200px;'>
+		<uib-tabset active='activePill'class='hidden-md hidden-lg' vertical='true'type='pills' style='col-xs-12 col-sm-12'>
+	<uib-tab index='0' heading='Change Notes' class='col-xs-12'>
+	
+		
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				Top E string set to {{musicNotes[stringE]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='note in musicNotes' id='' ng-click='noteChangeE(note)'>
+						{{note}}
+					</li>
+				</ul>
+		</div>
+			
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				B string set to {{musicNotes[stringB]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='note in musicNotes' id='' ng-click='noteChangeB(note)'>
+						{{note}}
+					</li>
+				</ul>
+		</div>
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				G string set to {{musicNotes[stringG]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='note in musicNotes' id='' ng-click='noteChangeG(note)'>
+						{{note}}
+					</li>
+				</ul>
+		</div>
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				D string set to {{musicNotes[stringD]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='note in musicNotes' id='' ng-click='noteChangeD(note)'>
+						{{note}}
+					</li>
+				</ul>
+		</div>
+		<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				 A string set to {{musicNotes[stringA]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='note in musicNotes' id='' ng-click='noteChangeA(note)'>
+						{{note}}
+					</li>
+				</ul>
+		</div>
+				<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				 Bottom E string set to {{musicNotes[stringEe]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='note in musicNotes' id='ratios' ng-click='noteChangeE(note)'>
+						{{note}}
+					</li>
+				</ul>
+		</div>
+			
+		
+		</uib-tab>
+
+		<uib-tab index='1' heading='Pick Scale' class='col-xs-12'>
+			<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+				Scale set to {{nameScale}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='sca in allScales' id='' ng-click='pickin(sca)'>
+						{{sca.name}}
+					</li>
+				</ul>
+		</div>
+			<div uib-dropdown>
+			<button uib-dropdown-toggle class='btn btn-default ' type='button' id='' >
+			Key set to {{musicNotes[toneValue]}}
+				<span class='caret'></span>
+			</button>
+				<ul uib-dropdown-menu>
+					<li id='musicN' ng-click=''>
+					Show all
+					</li>
+					<li ng-repeat='tone in musicNotes' id='' ng-click='toneSelect(tone)'>
+						{{tone}}
+					</li>
+				</ul>
+		</div>
+		</uib-tab>
+		</uib-tabset>
+
+	</div>
+</div>

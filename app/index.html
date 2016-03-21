@@ -44,14 +44,14 @@
           <div id=''class='col-sm-8 col-xs-12'style='border:1px none;'>
           <ul class="navmenu col-xs-12 col-sm-12" id='navSubMenu' style='display:inline-flex; border:none; list-style:none;margin:0;
             '>
-          <!--     <li  style ='
-               'class='col-xs-12 highLighted col-sm-4'><a ng-href="#/scales">Scales and Notes(In development)</a></li><br>
-              <li style ='
+              <li  style ='
+               'class='col-xs-6 highLighted col-sm-4'><a ng-href="#/scales">Scales and Notes(In development)</a></li><br>
+             <!--  <li style ='
                           
                'class='col-xs-12 highLighted2 col-sm-4'><a ng-href="#/frets">Chords <br>(In development)</a></li> -->
               <li style ='
                          
-               ' class='col-xs-12 highLighted4 col-sm-4'><a ng-href='#/frets'>Pinch <br>Harmonics</a></li>
+               ' class='col-xs-6 highLighted4 col-sm-4'><a ng-href='#/frets'>Pinch <br>Harmonics</a></li>
             </ul>
             
           </div>
@@ -109,7 +109,7 @@
         </div>
         </div>
         <div class='row'>
-        <div class='col-md-8'></div>
+        <div class='col-md-8'style='max-height:1520px;'></div>
         <div ng-view="" class='col-md-12'></div>
         <div class='col-md-5'></div>
         </div>
@@ -175,6 +175,10 @@
         <script src="scripts/directives/gstring.js"></script>
         <script src="scripts/directives/stringselection.js"></script>
         <script src="scripts/directives/colornote.js"></script>
+        <script src="scripts/directives/fretboardmini.js"></script>
+        <script src="scripts/directives/gstringmini.js"></script>
+        <script src="scripts/directives/highlight.js"></script>
+        <script src="scripts/services/scalelist.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -15,9 +15,9 @@ angular.module('guitarwebApp')
      	},
       restrict: 'AEC',
       link: function postLink(scope, element, attrs) {
-        
+        element.css('border','1px none');
         console.log('the fuck');
-        scope.scaleNote = [];
+        
 
         scope.not = scope.note;
 
@@ -33,9 +33,13 @@ angular.module('guitarwebApp')
               element.css('color','white');
             }
             
+            else if(selectedNote == selectedScale[4]){
+              element.css('background-color','black');
+              element.css('color','white');
+            }
 
             else if(selectedNote == selectedScale[x]){
-              element.css('background-color','green');
+              element.css('background-color','black');
               element.css('color','white');
             }
             
@@ -43,6 +47,7 @@ angular.module('guitarwebApp')
         };
 
         scope.$watchGroup(['stuff','note'],function(newVal,oldVal){
+          scope.scaleNote = [];
           scope.stuff = newVal[0];
           scope.note = newVal[1];
           var scaleNotes = angular.fromJson(scope.stuff);

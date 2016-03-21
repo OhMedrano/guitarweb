@@ -2,22 +2,19 @@
 
 /**
  * @ngdoc directive
- * @name guitarwebApp.directive:fretBoard
+ * @name guitarwebApp.directive:fretboardMini
  * @description
- * # fretBoard
+ * # fretboardMini
  */
 angular.module('guitarwebApp')
-  .directive('fretBoard', function () {
+  .directive('fretboardMini', function () {
     return {
-      templateUrl:'templates/fretBoard.html',
-      replace:true,
+      templateUrl:'templates/fretBoardMini.html',
       restrict: 'E',
+      replace:true,
       link: function postLink(scope, element, attrs) {
         scope.musicNotes = ["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"];
        
-        /*scope.allScales = Scale.query({scaleId:$routeParams.scaleId});*/
-
-
 
 
         scope.stringE = 7;
@@ -40,22 +37,19 @@ angular.module('guitarwebApp')
       	scope.currentScale = scope.majorScale;
       	scope.emptyScale = [];
       	scope.nameScale;
-      	scope.allScales = [
-      						{'name':"Major/Ionian", "scale":[0,2,4,5,7,9,11]},
-      						{'name':"Minor/Aeolian","scale":[0,2,3,5,7,8,10]},
-      						{'name':"Dorian","scale":[0,2,3,5,7,9,10]},
-      						{'name':"Phyrgian","scale":[0,1,3,5,7,8,10]},
-      						{'name':"Lydian","scale":[0,2,4,6,7,9,11]},
-      						{'name':"Myxolydian","scale":[0,2,4,5,7,9,10]},
-      						{'name':"Locrian","scale":[0,1,3,5,6,8,10]},
-      						{'name':"Minor Pentatonic","scale":[0,3,5,7,10]},
-      						{'name':"Major Pentatonic","scale":[0,2,4,7,9]},
-      						{'name':"Minor Blues","scale":[0,3,5,6,7,10]},
-      						{'name':"Harmonic Minor","scale":[0,2,3,5,7,8,11]},
-      					];
+      	scope.allScales = [{"name":"Major/Ionian", "scale":[0,2,4,5,7,9,11]},
+      						{"name":"Minor/Aeolian","scale":[0,2,3,5,7,8,10]},
+      						{"name":"Dorian","scale":[0,2,3,5,7,9,10]},
+      						{"name":"Phyrgian","scale":[0,1,3,5,7,8,10]},
+      						{"name":"Lydian","scale":[0,2,4,6,7,9,11]},
+      						{"name":"Myxolodian","scale":[0,2,4,5,7,9,10]},
+      						{"name":"Locrian ","scale":[0,1,3,5,6,8,10]},
 
 
-console.log(scope.allScales);
+      						];
+
+
+
 
       	scope.toneValue = 3;
       	scope.pickin = function(scale){
@@ -188,7 +182,7 @@ console.log(scope.allScales);
       		scope.stringG = 10;
       		scope.stringD = 5;
       		scope.stringA = 0;
-      		scope.stringEe = 7;
+      		scope.stringEE = 7;
       	};
       	scope.fullStep = function(){
       		scope.stringE = 5;
@@ -225,38 +219,6 @@ console.log(scope.allScales);
       		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
       		return scope.stringE;
       	})
-/*
-      	scope.$watch('stringB',function(newVal, oldVal){
-      		scope.stringB = newVal;
-      		console.log(newVal, oldVal);
-      		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
-      		return scope.stringB;
-      	})*/
-      	/*scope.$watch('stringG',function(newVal, oldVal){
-      		scope.stringG = newVal;
-      		console.log(newVal, oldVal);
-      		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
-      		return scope.stringG;
-      	})
-      	scope.$watch('stringD',function(newVal, oldVal){
-      		scope.stringD = newVal;
-      		console.log(newVal, oldVal);
-      		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
-      		return scope.stringD;
-      	})
-      	scope.$watch('stringA',function(newVal, oldVal){
-      		scope.stringA = newVal;
-      		console.log(newVal, oldVal);
-      		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
-      		return scope.stringA;
-      	})
-      	scope.$watch('stringEe',function(newVal, oldVal){
-      		scope.stringEe = newVal;
-      		console.log(newVal, oldVal);
-      		console.log(scope.musicNotes[newVal], scope.musicNotes[oldVal]);
-      		return scope.stringEe;
-      	})*/
-    
       }
     };
   });
