@@ -33,11 +33,15 @@ angular.module('guitarwebApp')
       	scope.majorScale = [0,2,4,5,7,9,11];
       	scope.minorScale = [0,2,3,5,7,8,10];
       	scope.pickedScale = [];
+        scope.pickedChord = [];
       	scope.shownNotes = [];
       	scope.currentScale = scope.majorScale;
+        scope.currentChord = scope.pickedChord;
       	scope.emptyScale = [];
       	scope.nameScale;
+        name.nameChord;
       	scope.allScale = [
+
                           {"name":"Major/Ionian","scale":[0,2,4,5,7,9,11]},
       						        {"name":"Minor/Aeolian","scale":[0,2,3,5,7,8,10]},
       						        {"name":"Dorian","scale":[0,2,3,5,7,9,10]},
@@ -55,9 +59,24 @@ angular.module('guitarwebApp')
 
       						];
 
+          scope.chords = [
+                        {"name":"Major","forumla":[0,4,7]},
+                        {"name":"Minor","forumla":[0,3,7]},
+                        {"name":"6th ","forumla":[0,4,7,9]},
+                        {"name":"7th ","forumla":[0,4,7,10]},
+                        {"name":"9th ","forumla":[0,4,7,10,2]},
+                        {"name":"13th (Almost Impossible)","forumla":[0,4,7,10,2,5,9]},
+                        {"name":"Major 7th","forumla":[0,4,7,11]},
+                        {"name":"Minor 7th","forumla":[0,3,7,10]},
 
-      	scope.selectedHigh = 
 
+          ];
+      	scope.emptyScale = function(){
+          scope.pickedScale = [];
+        };
+        scope.emptyChord = function(){
+          scope.pickedChord = [];
+        }
       	scope.toneValue = 3;
       	scope.pickin = function(scale){
       		var pickedS = scale.scale;
@@ -70,7 +89,15 @@ angular.module('guitarwebApp')
 
       		return scope.pickedScale, scope.nameScale;
       	};
+        scope.pickC = function(chord){
+          var pickedF = chord.forumla;
+          var pickedA = chord.name;
 
+          scope.nameChord = pickedA;
+          scope.pickedChord = pickedF;
+
+          return scope.pickedChord, scope.nameChord;
+        }
       	scope.toneSelect = function(tone){
       		var toned = tone;
 
@@ -78,9 +105,33 @@ angular.module('guitarwebApp')
 
       		scope.toneValue = toned;
       		return scope.toneValue;
-      	}
+      	};
+
+        scope.chooseChord = function(chord,key){
+          var chorde = [];
+
+          var alteredKey = [];
+
+          for(var x=0;x<scope.musicNotes.length;x++){
+            if(x == key){
+              alteredKey.push(x);
+                for(var i=1;i<=scope.musicNotes.length-1;i++){
+                  alteredKey.push((x+i)%12);
+                }
+            }
+          }
+
+          for(var y=0;y<=chord.length-1;y++){
+            chorde.push(alteredKey[chord[y]]);
+          }
+
+          scope.currentChord = chorde;
+        };
 
 
+
+
+        
       	// Choosing the right notes in the given scale
       	scope.chooseScale = function(scale,key){
 
@@ -147,6 +198,8 @@ angular.module('guitarwebApp')
 
 
         //
+        //Active toggles for chords
+        scope.toggleChord = {item:-1};
 
         //active Toggles for scales
         scope.toggleScale = {item:-1};
@@ -355,13 +408,24 @@ angular.module('guitarwebApp')
         }
 
       	//
-
+        
       	//Jquery shit
       		$('.selectedTune').click(function(){
       			$('#selectTune').children().removeClass('highLigh');
       			$(this).addClass('highLigh');
       		})
+          /*$('#leftHand').children().hide();
 
+          $('#leftHandSelect').click(function(){
+            $('#rightHand').children().hide();
+            $('#leftHand').children().slideIn();
+
+          });
+          $('#rightHandSelect').click(function(){
+            $('#leftHand').hide();
+            $('#rightHand').children().slideIn();
+
+          });*/
       	//
 
 

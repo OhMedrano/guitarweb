@@ -2,23 +2,21 @@
 
 /**
  * @ngdoc directive
- * @name guitarwebApp.directive:gString
+ * @name guitarwebApp.directive:leftString
  * @description
- * # gString
+ * # leftString
  */
 angular.module('guitarwebApp')
-  .directive('gString', function () {
+  .directive('leftString', function () {
     return {
-    	scope:{
-    		root: '=root',
-    		scale: '@scale',
-            chord:'@chord'
-    	},
-      templateUrl: 'templates/guitarString.html',
-      restrict: 'E',
-     
+      templateUrl: 'templates/leftString.html',
+      scope:{
+      		root: '=root',
+    		scale: '@scale'
+      },
+      restrict: 'EA',
       link: function postLink(scope, element, attrs) {
-       		 element.css({
+         element.css({
                         fontSize:"12px",
                         borderRight:'1px solid black'
                    });
@@ -68,13 +66,11 @@ angular.module('guitarwebApp')
 
 
 
-       	 scope.$watchGroup(['scale','chord'],function(newVal,oldVal){
+       	 scope.$watch('scale',function(newVal,oldVal){
        	 	scope.scaled = [];
-       	 	scope.scaled = angular.fromJson(newVal[0]);
-                  scope.chordz = [];
-       	 	scope.chordz = angular.fromJson(newVal[1]);
+       	 	scope.scaled = angular.fromJson(newVal);
 
-                  scope.chorded = scope.chordz;
+       	 	
 /*	
        	 	scope.scales = attrs.scale.split(',');
        	 	
@@ -87,7 +83,7 @@ angular.module('guitarwebApp')
 
        	 	
 
-      		console.log(angular.fromJson(scope.scale),scope.scaledd,scope.chorded);
+      		console.log(angular.fromJson(scope.scale),scope.scaledd);
 
 
 
@@ -147,21 +143,3 @@ angular.module('guitarwebApp')
       }
     };
   });
-
-
-/*
-	What I want this to do, is to 
-
-	FIRST 
-		Take a number value named root. Take root value, and place it on the root expression 
-		gString. 
-		
-
-		Sadly, until I can figure this out later, each note will get its own variable. 
-
-		So root will be x. Fret 1 will be y = x+1, fret 2 z = x+2 and so forth. 
-
-		I'm going to have to add a modulo for when the value overflows the array length of musicNotes.
-
-
-*/

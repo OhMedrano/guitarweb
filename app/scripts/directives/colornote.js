@@ -11,7 +11,8 @@ angular.module('guitarwebApp')
     return {
      	scope:{
      		stuff:"=stuff",
-        note: '@note'
+        note: '@note',
+        chord:'@chord'
      	},
       restrict: 'AEC',
       link: function postLink(scope, element, attrs) {
@@ -53,17 +54,37 @@ angular.module('guitarwebApp')
             
           }
         };
+        scope.coloredChord = function(selectedNote, selectedChord){
+         if(!selectedChord){
+          return selectedChord
+         }
+         else {
+          for(var x=0;x<=selectedChord.length-1;x++){
+            if(selectedNote == selectedChord[0]){
+              element.css('background-color','red');
+              element.css('color','white');
+            }
 
-        scope.$watchGroup(['stuff','note'],function(newVal,oldVal){
+            else if(selectedNote == selectedChord[x]){
+              element.css('background-color','blue');
+              element.css('color','white');
+            }
+          }
+        }
+        };
+        scope.$watchGroup(['stuff','note','chord'],function(newVal,oldVal){
           scope.scaleNote = [];
           scope.stuff = newVal[0];
           scope.note = newVal[1];
+          scope.chord = newVal[2];
+          var chordNotes = angular.fromJson(scope.chord);
           var scaleNotes = angular.fromJson(scope.stuff);
-
+          scope.chordNote = chordNotes;
           scope.scaleNote = scaleNotes;
           scope.not = scope.note;
 
           scope.coloredNote(scope.not, scope.scaleNote);
+          scope.coloredChord(scope.not,scope.chordNote);
           
 
           console.log('This note is ' + scope.not);

@@ -8,11 +8,35 @@
 
 
 
-	<div id=''class='hidden-sm hidden-xs'style='width:1650px;'>	
+	<div id=''class='hidden-sm hidden-xs'style='width:1650px;' ng-show='orent'ng-hide='orent'>	
 		
-	<div id='leftHand'class='hidden-md hidden-lg'style=''>
-		<img src='/images/leftHandFret.png' style="width:99.8%;position:relative;z-index:1;top:0;"/>
+	<div id='leftHand'class=''style='height:271px;' ng-show='leftGuitar'>
+		<img src='/images/images/FretboardLeft_03.png' style="width:99.8%;position:relative;z-index:1;top:0;border:3px solid #ccc"/>
 
+		
+		<div id=''class=''style=''>
+
+		</div>
+			<div id=''class=''style='position:relative; bottom:24px;padding:0;'>
+				<div id='EstringTop'class='eString'style='position:relative;bottom:225px;z-index:2;'>
+					<left-String root='stringE'class='col-md-12' scale='{{currentScale}}'></g-String>
+				</div>
+				<div id='Bstring'class=''style='position:relative;bottom:230px;z-index:2;'>
+					<left-String root='stringB'class='col-md-12'scale='{{currentScale}}'></g-String>
+				</div>
+				<div id='Gstring'class=''style='position:relative;bottom:229px;z-index:2;'>
+					<left-String root='stringG'class='col-md-12'scale='{{currentScale}}'></g-String>
+				</div>
+				<div id='Dstring'class=''style='position:relative;bottom:225px;z-index:2;'>
+					<left-String root='stringD'class='col-md-12'scale='{{currentScale}}'></g-String>
+				</div>
+				<div id='Astring'class=''style='position:relative;bottom:219px;z-index:2;'>
+					<left-String root='stringA'class='col-md-12'scale='{{currentScale}}'></g-String>
+				</div>
+				<div id='EstringBottom'class='eString'style='position:relative;bottom:220px;z-index:2;'>
+					<left-String root='stringEe'class='col-md-12'scale='{{currentScale}}'></g-String>
+				</div>
+			</div>
 	</div>
 
 
@@ -21,7 +45,7 @@
 
 
 
-	<div id='rightHand'class=''style=''>
+	<div id='rightHand'class=''''style=''ng-hide='leftGuitar'>
 		<img src='/images/Fretboard.png'style='width:99.8%; position:relative;z-index:1;border:3px solid #ccc;'/>
 		
 		<div id=''class=''style=''>
@@ -29,22 +53,22 @@
 		</div>
 			<div id=''class=''style='position:relative; top:5px;padding:0;'>
 				<div id='EstringTop'class='eString'style='position:relative;bottom:225px;z-index:2;'>
-					<g-String root='stringE'class='col-md-12' scale='{{currentScale}}'></g-String>
+					<g-String root='stringE'class='col-md-12'chord='{{currentChord}}' scale='{{currentScale}}'></g-String>
 				</div>
 				<div id='Bstring'class=''style='position:relative;bottom:225px;z-index:2;'>
-					<g-String root='stringB'class='col-md-12'scale='{{currentScale}}'></g-String>
+					<g-String root='stringB'class='col-md-12'chord='{{currentChord}}'scale='{{currentScale}}'></g-String>
 				</div>
 				<div id='Gstring'class=''style='position:relative;bottom:215px;z-index:2;'>
-					<g-String root='stringG'class='col-md-12'scale='{{currentScale}}'></g-String>
+					<g-String root='stringG'class='col-md-12'chord='{{currentChord}}'scale='{{currentScale}}'></g-String>
 				</div>
 				<div id='Dstring'class=''style='position:relative;bottom:205px;z-index:2;'>
-					<g-String root='stringD'class='col-md-12'scale='{{currentScale}}'></g-String>
+					<g-String root='stringD'class='col-md-12'chord='{{currentChord}}'scale='{{currentScale}}'></g-String>
 				</div>
 				<div id='Astring'class=''style='position:relative;bottom:195px;z-index:2;'>
-					<g-String root='stringA'class='col-md-12'scale='{{currentScale}}'></g-String>
+					<g-String root='stringA'class='col-md-12'chord='{{currentChord}}'scale='{{currentScale}}'></g-String>
 				</div>
-				<div id='EstringBottom'class='eString'style='position:relative;bottom:185px;z-index:2;'>
-					<g-String root='stringEe'class='col-md-12'scale='{{currentScale}}'></g-String>
+				<div id='EstringBottom'class=''style='position:relative;bottom:185px;z-index:2;'>
+					<g-String root='stringEe'class='col-md-12'chord='{{currentChord}}'scale='{{currentScale}}'></g-String>
 				</div>
 			</div>
 </div>
@@ -159,7 +183,7 @@
 						Open A
 
 						</div>
-						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='daddad()'high-Light>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1 none' ng-click='daddad()'high-Light>
 						DADDAD
 						</div>
 						<div id=''class='col-md-3 selectedTune'style='border-right:1px none' ng-click='dTune()'high-Light>
@@ -174,7 +198,7 @@
 						Open B
 
 						</div>
-						<div id=''class='col-md-3 selectedTune'style='border-right:1px solid black' ng-click='cello()'high-Light>
+						<div id=''class='col-md-3 selectedTune'style='border-right:1px none' ng-click='cello()'high-Light>
 						Cello/Standard 
 
 						</div>
@@ -218,47 +242,107 @@
 				<!-- Right side -->
 				<div id=''class='col-md-5' style=''>
 						<div id=''class='col-md-12'style=''>
-							<h4>Pick your scale and scale root.</h4>
-
+							<h4 class='col-md-4'>Pick your scale</h4>
+							<h4 class='col-md-6'>Pick your chord</h4>
 							
 						</div>
 						<br>
-						<div id=''class='col-md-4' style='overflow:auto;border:1px none;height:200px;'>
+						<div id=''class='col-md-4' style='overflow:auto;border:1px none;height:180px;'>
+						<div id=''class='col-md-12'style=''>
+							
 
 							<div id=''class='col-md-12'style='border-bottom:1px solid black;'ng-repeat='scale in allScale'ng-model='pickedScale'ng-click='pickin(scale);toggleScale.item = $index'ng-class="{'highLigh':toggleScale.item == $index}"high-Light>
 								{{scale.name}}
 
 							</div>
-							
+						</div>	
+
 						</div>
+
 						<div id=''class='col-md-8'style=''>
-						<div id=''class='col-md-12'style='border-bottom:1px solid black'>
-							<div ng-repeat='tone in musicNotes' class=' col-md-2'ng-click='toneSelect($index);toggleTune.item = $index'ng-class="{'highLigh':toggleTune.item == $index}"high-Light>
-							{{tone}}
+							
+							<div id=''class='col-md-6'style='overflow:auto;height:180px'>
+								<div id=''class='col-md-12'style='border-bottom:1px solid black;'ng-repeat='chor in chords'
+								ng-model='pickedChord'ng-click='pickC(chor);toggleChord.item = $index' ng-class="{'highLigh':toggleChord.item == $index}">
+									{{chor.name}}
+								</div>
 							</div>
-
-						</div>
+						
+							
 							<br>
-							<div id=''class='col-md-12'ng-model='chooseScale(pickedScale, toneValue)'>
+							<div id=''class='col-md-12'ng-model='chooseScale(pickedScale, toneValue);chooseChord(pickedChord,toneValue)'>
 
 
 
 							<br>
 							
-							<div id=''class='col-md-12'>
-							Current Key: {{musicNotes[toneValue]}} {{nameScale}}
-							</div>
+							
 							<br>
+							<div id=''class='col-md-12'style='position:relative;'>
+								
+
+							</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						<div id=''class='col-md-12'style='border:1px none;top:10px;'>
+							
+							<div id=''class='col-md-12'style=''>
+								<h4>Choose root note:</h4>
+							</div>
+							<div id=''class='col-md-12'style='border-bottom:1px dashed black'>
+								<div ng-repeat='tone in musicNotes' class=' col-md-2'ng-click='toneSelect($index);toggleTune.item = $index'ng-class="{'highLigh':toggleTune.item == $index}"high-Light>
+									{{tone}}
+								</div>
+
+							</div>
+							<div id=''class='col-md-12'style='padding:5px'>
+
+							</div>
 							<div id=''class='col-md-12'>
+							<h4>Current Key:</h4> {{musicNotes[toneValue]}} {{nameScale}}
+							</div>
+
+							<br>
+							<div id=''class='col-md-12'style='margin-bottom:4px;border-bottom:1px solid black;'>
 								
 								<div class='col-md-1'ng-repeat='cNote in currentScale' style='font-size:12px;margin-right:3%;text-align:left;'>
 								{{musicNotes[cNote]}}
 								</div>
 							</div>
+							<div id=''class='col-md-12'>
+							<h4>Current Chord:</h4> {{musicNotes[toneValue]}} {{nameChord}}
+							</div>
+							<div id=''class='col-md-12'style='margin-bottom:4px;border-bottom:1px solid black;'>
+								
+								<div class='col-md-1'ng-repeat='cNote in currentChord' style='font-size:12px;margin-right:3%;text-align:left;'>
+								{{musicNotes[cNote]}}
+								</div>
+							</div>
+							<div id=''class='col-md-4'>
+								
+								
+								<div id='leftHandSelect'class='' style=''>
+								Left Hand Mode: <input type='checkbox' class=''ng-model='leftGuitar'>
+								</div>
+							</div>
+							<div id=''class='col-md-3' style='border-right:1px solid black;border-left:1px solid black;'>
+								<div id=''class=''ng-click='emptyScale(pickedScale)'>
+									Reset Scale
+
+								</div>
+							</div>
+							<div id=''class='col-md-3' style='border-right:1px none;border-left:1px none;'>
+								<div id=''class=''ng-click='emptyChord(pickedChord)'>
+									Reset Chords
+
+								</div>
 							</div>
 						</div>
-
 				</div>
+
+
 			</div>
 		</div>
 </div>
